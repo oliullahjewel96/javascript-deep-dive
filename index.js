@@ -56,10 +56,23 @@
 // 1) must be initialized with value
 //2) can't be reassigned after declarations
 
-const originalPrice = 50;
-const percentOff = 20;
-const salePrice = originalPrice * (percentOff / 100);
+// const originalPrice = 50;
+// const percentOff = 20;
+// const salePrice = originalPrice * (percentOff / 100);
 
 // rest of our program (maybe 100s of lines)
 
-console.log(salePrice);
+// console.log(salePrice);
+
+
+var price = 20;
+var isSale = true;
+
+if(isSale){
+    //discount price of product
+    var price = 20-2;
+    //do something
+    console.log("Sale price", price);
+}
+
+console.log("Price", price);
