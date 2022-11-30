@@ -65,14 +65,21 @@
 // console.log(salePrice);
 
 
-var price = 20;
-var isSale = true;
+// var price = 20;
+// var isSale = true;
 
-if(isSale){
-    //discount price of product
-    const price = 20-2;
-    //do something
-    console.log("Sale price", price);
-}
+// if(isSale){
+//     //discount price of product
+//     const price = 20-2;
+//     //do something
+//     console.log("Sale price", price);
+// }
 
-console.log("Price", price);
+// console.log("Price", price);
+
+//template literal
+
+const weight = 150;
+const moonWeight = `You weigh ${weight * 0.165} on the moon`;
+
+console.log(moonWeight);
