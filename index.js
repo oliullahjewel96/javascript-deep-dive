@@ -29,9 +29,24 @@
 
 //hoisting
 
-console.log(age);
+// console.log(age);
 
-var age = 26;
+// var age = 26;
 // javascript runs in two modes 
 // 1) Sloppy mode -default in scripts 
 // 2) strict mode - throws more errors, prevents pitfalls of the language
+
+
+// Challenge 1: We want to log out the name "oli", but it doesn't work. Can you fix it?
+const name = "Oli";
+console.log(name);
+
+// Challenge 2: We want 102 to be logged out. But we're getting an error instead. Try to fix it!
+let count = 100;
+count = 101;
+count = 102;
+console.log(count);
+
+//  Challenge 3: We want to log out the price (50), but it doesn't work. Can you fix it?
+let price = 50;
+console.log(price);
