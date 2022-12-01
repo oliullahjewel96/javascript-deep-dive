@@ -79,7 +79,22 @@
 
 //template literal
 
-const weight = 150;
-const moonWeight = `You weigh ${weight * 0.165} on the moon`;
+// const weight = 150;
+// const moonWeight = `You weigh ${weight * 0.165} on the moon`;
 
-console.log(moonWeight);
+// console.log(moonWeight);
+
+//if statement -- evaluates the boolean values
+
+const prefersDarkMode = true;
+const prefersSolarisedMode = true;
+
+
+if(prefersDarkMode){
+    console.log("Set dark mode")
+}else if(prefersSolarisedMode){
+   console.log("solarised mode set")
+}
+else{
+    console.log("set light mode!")
+}
