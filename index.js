@@ -86,15 +86,47 @@
 
 //if statement -- evaluates the boolean values
 
-const prefersDarkMode = true;
-const prefersSolarisedMode = true;
+// const prefersDarkMode = true;
+// const prefersSolarisedMode = true;
 
 
-if(prefersDarkMode){
-    console.log("Set dark mode")
-}else if(prefersSolarisedMode){
-   console.log("solarised mode set")
-}
-else{
-    console.log("set light mode!")
+// if(prefersDarkMode){
+//     console.log("Set dark mode")
+// }else if(prefersSolarisedMode){
+//    console.log("solarised mode set")
+// }
+// else{
+//     console.log("set light mode!")
+// }
+
+
+/*
+Primitive types:
+
+string
+number
+boolean
+undefined
+null
+symbol
+
+everything else - Object type
+*/
+
+// let message = 'some string';
+
+// console.log(typeof window);
+
+// 1) Explicit type conversion
+// 2) Implicit type conversion 
+
+// console.log(typeof String(42));
+
+//truthy
+//falsy    [false, 0, '', null, undefined, NaN]
+
+if("hello"){
+    console.log("run");
+}else{
+    console.log("skipped");
 }
