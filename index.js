@@ -125,8 +125,36 @@ everything else - Object type
 //truthy
 //falsy    [false, 0, '', null, undefined, NaN]
 
-if("hello"){
-    console.log("run");
-}else{
-    console.log("skipped");
-}
+// if("hello"){
+//     console.log("run");
+// }else{
+//     console.log("skipped");
+// }
+
+//Avoid direct comparisons in javascript
+
+// let username = null;
+
+// if(!username){
+//     console.log("No User");
+// }
+
+//use === or strict equals
+
+// const user = null;
+// let username = undefined;
+
+// if(null===username){
+//     console.log("Equals");
+// }else{
+//     console.log("Not equals");
+// }
+
+//shorten conditions and ternary
+
+const isAuthenticated = false;
+
+
+const cartItemCount = isAuthenticated ? 1 : "Please log in";
+
+console.log(cartItemCount)
