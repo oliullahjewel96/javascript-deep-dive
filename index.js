@@ -152,9 +152,17 @@ everything else - Object type
 
 //shorten conditions and ternary
 
-const isAuthenticated = false;
+// const isAuthenticated = false;
 
 
-const cartItemCount = isAuthenticated ? 1 : "Please log in";
+// const cartItemCount = isAuthenticated ? 1 : "Please log in";
 
-console.log(cartItemCount)
+// console.log(cartItemCount)
+
+// ternary chaining
+
+const age = 12;
+
+const greetings = age < 12 ? "Hey Kiddo" : age < 18 ? "Hey Teenager" : age > 20 ? "hey adult" : "Hey man"
+
+console.log(greetings);
