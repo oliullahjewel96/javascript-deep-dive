@@ -204,3 +204,12 @@ everything else - Object type
 // const hasValidEmail = false;
 // const user = hasValidEmail && (response || "guest");
 //  console.log("user: ", user);
+
+
+//functions
+
+function echo(user, greeting){
+    console.log(`${greeting} ${user}`);
+}
+
+echo("Oli", "Hello");
