@@ -208,11 +208,20 @@ everything else - Object type
 
 //functions
 
-function echo(user, greeting){
-    //console.log(`${greeting} ${user}`);
-    return `${greeting} ${user}`;
+// function echo(user, greeting){
+//     //console.log(`${greeting} ${user}`);
+//     return `${greeting} ${user}`;
+// }
+
+// const result = echo("Oli", "Hello");
+
+// console.log(result);
+
+
+function splitBill (myBill, myFriendsBill){
+       console.log(`Each person need to pay ${myBill / myFriendsBill}`)
 }
 
-const result = echo("Oli", "Hello");
-
-console.log(result);
+splitBill(10, 2);
+splitBill(16, 4);
+splitBill(350, 9)
