@@ -209,7 +209,10 @@ everything else - Object type
 //functions
 
 function echo(user, greeting){
-    console.log(`${greeting} ${user}`);
+    //console.log(`${greeting} ${user}`);
+    return `${greeting} ${user}`;
 }
 
-echo("Oli", "Hello");
+const result = echo("Oli", "Hello");
+
+console.log(result);
