@@ -218,10 +218,10 @@ everything else - Object type
 // console.log(result);
 
 
-function splitBill (myBill, myFriendsBill){
-       console.log(`Each person need to pay ${myBill / myFriendsBill}`)
-}
+// function splitBill (myBill, myFriendsBill){
+//        console.log(`Each person need to pay ${myBill / myFriendsBill}`)
+// }
 
-splitBill(10, 2);
-splitBill(16, 4);
-splitBill(350, 9)
+// splitBill(10, 2);
+// splitBill(16, 4);
+// splitBill(350, 9)
