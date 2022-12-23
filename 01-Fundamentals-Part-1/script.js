@@ -57,3 +57,14 @@ console.log(typeof null);*/
 // console.log(`Johns BMI: ${johnsBMI}`);
 
 // console.log(markHigherBMI);
+
+//template literal
+
+// const firstName = "oli";
+// const job = "IT Engineer";
+// const birthYear = 1996;
+// const currentYear = 2022;
+
+// const oli = `I'm ${firstName}, a ${currentYear - birthYear} years old ${job}`;
+
+// console.log(oli);
