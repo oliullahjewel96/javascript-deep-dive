@@ -19,23 +19,41 @@ console.log(typeof year);
 console.log(typeof null);*/
 
 //Arithmetic operators
-const currentAgeYear = 2022;
-const ageRobin = currentAgeYear - 1995;
-const ageOli = currentAgeYear - 1996;
+// const currentAgeYear = 2022;
+// const ageRobin = currentAgeYear - 1995;
+// const ageOli = currentAgeYear - 1996;
 
-console.log(ageRobin, ageOli, ageOli * 2, ageRobin / 2);
+// console.log(ageRobin, ageOli, ageOli * 2, ageRobin / 2);
 
-//Assignment operators
+// //Assignment operators
 
-let x = 10 + 5;
-x += 15;
-x *= 10;
-x -= 11;
-x++;
-x--;
-console.log(x);
+// let x = 10 + 5;
+// x += 15;
+// x *= 10;
+// x -= 11;
+// x++;
+// x--;
+// console.log(x);
 
-//comparison operators
+// //comparison operators
 
-let age = ageRobin > ageOli;
-console.log(age);
+// let age = ageRobin > ageOli;
+// console.log(age);
+
+//coding challenge
+
+// const marksMass = 78;
+// const johnsMass = 92;
+// let marksHeight = 1.69;
+// let johnsHeight = 1.95;
+
+// let marksBMI = marksMass / (marksHeight * marksHeight);
+
+// let johnsBMI = johnsMass / (johnsHeight * johnsHeight);
+
+// let markHigherBMI = marksBMI < johnsBMI;
+
+// console.log(`Marks BMI: ${marksBMI}`);
+// console.log(`Johns BMI: ${johnsBMI}`);
+
+// console.log(markHigherBMI);
