@@ -51,10 +51,13 @@ console.log(typeof null);*/
 
 // let johnsBMI = johnsMass / (johnsHeight * johnsHeight);
 
-// let markHigherBMI = marksBMI < johnsBMI;
+// let markHigherBMI = marksBMI > johnsBMI;
 
-// console.log(`Marks BMI: ${marksBMI}`);
-// console.log(`Johns BMI: ${johnsBMI}`);
+// if (markHigherBMI) {
+//   console.log(`Marks BMI: ${marksBMI} is higher than John's BMI ${johnsBMI}`);
+// } else {
+//   console.log(`Johns BMI: ${johnsBMI} is higher than Mark's BMI ${marksBMI}`);
+// }
 
 // console.log(markHigherBMI);
 
