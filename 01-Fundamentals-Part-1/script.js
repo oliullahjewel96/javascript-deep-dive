@@ -71,3 +71,20 @@ console.log(typeof null);*/
 // const oli = `I'm ${firstName}, a ${currentYear - birthYear} years old ${job}`;
 
 // console.log(oli);
+
+//Type conversion and coercion
+
+let inputYear = "1996";
+
+console.log(Number(inputYear), inputYear);
+
+console.log(String(23));
+
+console.log("23" - "10" - 3);
+console.log("23" + "10" + 3);
+console.log("23" * "2");
+console.log("23" / "2");
+
+let n = "1" + 1;
+n = n + 1;
+console.log(n);
