@@ -104,3 +104,37 @@ console.log(typeof null);*/
 // } else {
 //   console.log("Get a job");
 // }
+
+//coding challenge 3
+
+const scoreOneDolphine = 55;
+const scoreTwoDolphine = 56;
+const scoreThreeDolphine = 58;
+const scoreOneKoalas = 77;
+const scoreTwoKoalas = 40;
+const scoreThreeKoalas = 22;
+const minimumScore = 100;
+const averageScoreOfDolphines =
+  (scoreOneDolphine + scoreTwoDolphine + scoreThreeDolphine) / 3;
+const averageScoreOfKoalas =
+  (scoreOneKoalas + scoreTwoKoalas + scoreThreeKoalas) / 3;
+
+if (
+  averageScoreOfDolphines > averageScoreOfKoalas &&
+  averageScoreOfDolphines >= minimumScore
+) {
+  console.log("Team Dolphines are the winners");
+} else if (
+  averageScoreOfDolphines === averageScoreOfKoalas &&
+  averageScoreOfDolphines >= minimumScore &&
+  averageScoreOfKoalas >= minimumScore
+) {
+  console.log("The competition is a draw");
+} else if (
+  averageScoreOfKoalas > averageScoreOfDolphines &&
+  averageScoreOfKoalas >= minimumScore
+) {
+  console.log("Team Koalas are the winners");
+} else {
+  console.log("No one wins the trophy");
+}
