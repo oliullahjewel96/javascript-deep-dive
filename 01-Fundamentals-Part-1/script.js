@@ -74,17 +74,33 @@ console.log(typeof null);*/
 
 //Type conversion and coercion
 
-let inputYear = "1996";
+// let inputYear = "1996";
 
-console.log(Number(inputYear), inputYear);
+// console.log(Number(inputYear), inputYear);
 
-console.log(String(23));
+// console.log(String(23));
 
-console.log("23" - "10" - 3);
-console.log("23" + "10" + 3);
-console.log("23" * "2");
-console.log("23" / "2");
+// console.log("23" - "10" - 3);
+// console.log("23" + "10" + 3);
+// console.log("23" * "2");
+// console.log("23" / "2");
 
-let n = "1" + 1;
-n = n + 1;
-console.log(n);
+// let n = "1" + 1;
+// n = n + 1;
+// console.log(n);
+
+// Truthy and falsy values
+
+// console.log(Boolean(0));
+// console.log(Boolean(""));
+// console.log(Boolean(undefined));
+// console.log(Boolean(null));
+// console.log(Boolean(NaN));
+
+// const money = 0;
+
+// if (money) {
+//   console.log("Don't spend it at all");
+// } else {
+//   console.log("Get a job");
+// }
