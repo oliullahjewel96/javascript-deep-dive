@@ -107,34 +107,49 @@ console.log(typeof null);*/
 
 //coding challenge 3
 
-const scoreOneDolphine = 55;
-const scoreTwoDolphine = 56;
-const scoreThreeDolphine = 58;
-const scoreOneKoalas = 77;
-const scoreTwoKoalas = 40;
-const scoreThreeKoalas = 22;
-const minimumScore = 100;
-const averageScoreOfDolphines =
-  (scoreOneDolphine + scoreTwoDolphine + scoreThreeDolphine) / 3;
-const averageScoreOfKoalas =
-  (scoreOneKoalas + scoreTwoKoalas + scoreThreeKoalas) / 3;
+// const scoreOneDolphine = 55;
+// const scoreTwoDolphine = 56;
+// const scoreThreeDolphine = 58;
+// const scoreOneKoalas = 77;
+// const scoreTwoKoalas = 40;
+// const scoreThreeKoalas = 22;
+// const minimumScore = 100;
+// const averageScoreOfDolphines =
+//   (scoreOneDolphine + scoreTwoDolphine + scoreThreeDolphine) / 3;
+// const averageScoreOfKoalas =
+//   (scoreOneKoalas + scoreTwoKoalas + scoreThreeKoalas) / 3;
 
-if (
-  averageScoreOfDolphines > averageScoreOfKoalas &&
-  averageScoreOfDolphines >= minimumScore
-) {
-  console.log("Team Dolphines are the winners");
-} else if (
-  averageScoreOfDolphines === averageScoreOfKoalas &&
-  averageScoreOfDolphines >= minimumScore &&
-  averageScoreOfKoalas >= minimumScore
-) {
-  console.log("The competition is a draw");
-} else if (
-  averageScoreOfKoalas > averageScoreOfDolphines &&
-  averageScoreOfKoalas >= minimumScore
-) {
-  console.log("Team Koalas are the winners");
-} else {
-  console.log("No one wins the trophy");
-}
+// if (
+//   averageScoreOfDolphines > averageScoreOfKoalas &&
+//   averageScoreOfDolphines >= minimumScore
+// ) {
+//   console.log("Team Dolphines are the winners");
+// } else if (
+//   averageScoreOfDolphines === averageScoreOfKoalas &&
+//   averageScoreOfDolphines >= minimumScore &&
+//   averageScoreOfKoalas >= minimumScore
+// ) {
+//   console.log("The competition is a draw");
+// } else if (
+//   averageScoreOfKoalas > averageScoreOfDolphines &&
+//   averageScoreOfKoalas >= minimumScore
+// ) {
+//   console.log("Team Koalas are the winners");
+// } else {
+//   console.log("No one wins the trophy");
+// }
+
+//Coding challenge 3
+
+// let billValue = 201;
+// const tipFifteenPercent = billValue * (15 / 100);
+// const tipTwentyPercent = billValue * (20 / 100);
+
+// const tip =
+//   billValue >= 50 && billValue <= 300 ? tipFifteenPercent : tipTwentyPercent;
+
+// console.log(
+//   `The bill was ${billValue}, the tip was ${tip}, and the total value is ${
+//     billValue + tip
+//   }`
+// );
