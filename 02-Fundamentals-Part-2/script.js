@@ -19,3 +19,21 @@
 // console.log(appleJuice);
 // const appleOrangeJuice = fruitProcessor(2, 4);
 // console.log(appleOrangeJuice);
+
+//Function declaration
+
+function calculateAge1(birthYear) {
+  return (age = 2023 - birthYear);
+}
+
+const age1 = calculateAge1(1996);
+
+//Function expression (Anonymous function)
+
+const calculateAge2 = function (birthYear) {
+  return (age = 2023 - birthYear);
+};
+
+const age2 = calculateAge2(1997);
+
+console.log(age1, age2);
