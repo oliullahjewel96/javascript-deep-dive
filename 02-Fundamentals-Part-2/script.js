@@ -114,3 +114,31 @@
 //   calcAge(years[years.length - 1]),
 // ];
 // console.log(ages);
+
+const friends = ["Oli", "Robin", "Antu"];
+
+//Add element to the array
+friends.push("Hridoy");
+
+console.log(friends);
+
+friends.unshift("Nick"); //Add to the first index of the array
+console.log(friends);
+
+//remove element from array
+
+friends.pop();
+console.log(friends);
+
+friends.shift(); //remove first element
+console.log(friends);
+
+console.log(friends.indexOf("Robin"));
+console.log(friends.indexOf("saif"));
+
+console.log(friends.includes("Oli"));
+console.log(friends.includes("Saif"));
+
+if (friends.includes("Antu")) {
+  console.log("You have a friend called Antu");
+}
