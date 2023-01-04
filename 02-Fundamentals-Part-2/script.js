@@ -63,3 +63,27 @@
 
 // const finalJuice = fruitProcessor(2, 4);
 // console.log(finalJuice);
+
+//Coding challenge 4
+
+const calcAverage = (score1, score2, score3) => {
+  const averageScore = (score1 + score2 + score3) / 3;
+  return averageScore;
+};
+
+const dolphinsAvgScore = calcAverage(44, 23, 71);
+const koalasAvgScore = calcAverage(65, 54, 49);
+
+const checkWinner = (avgDolphins, avgKoalas) => {
+  if (avgDolphins > avgKoalas * 2) {
+    console.log(`Dolphins Wins (${avgDolphins} vs ${avgKoalas})`);
+  } else if (avgKoalas > avgDolphins * 2) {
+    console.log(`Koalas Wins (${avgKoalas} vs ${avgDolphins})`);
+  } else {
+    console.log(
+      `No team wins ( Koalas ${avgKoalas} vs Dolphins ${avgDolphins})`
+    );
+  }
+};
+
+checkWinner(dolphinsAvgScore, koalasAvgScore);
