@@ -173,7 +173,7 @@ const oli = {
   firstName: "oli",
   lastName: "ullah",
   age: 2023 - 1996,
-  profefssion: "Software Engineer",
+  profession: "Software Engineer",
   friends: ["Nick", "robin", "antu"],
 };
 
@@ -184,3 +184,9 @@ const nameKey = "Name";
 
 console.log(oli["first" + nameKey]);
 console.log(oli["last" + nameKey]);
+
+const interestedIn = prompt(
+  "What do you want to know about oli? Choose between first name, last name, age, profession, friends"
+);
+
+console.log(oli[interestedIn]);
