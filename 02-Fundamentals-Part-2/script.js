@@ -169,13 +169,18 @@
 
 //js objects
 
-// const oli = {
-//   firstName: "oli",
-//   lastName: "ullah",
-//   age: 2023 - 1996,
-//   profefssion: "Software Engineer",
-//   friends: ["Nick", "robin", "antu"],
-// };
+const oli = {
+  firstName: "oli",
+  lastName: "ullah",
+  age: 2023 - 1996,
+  profefssion: "Software Engineer",
+  friends: ["Nick", "robin", "antu"],
+};
 
 // console.log(oli.firstName);
 // console.log(oli["lastName"]);
+
+const nameKey = "Name";
+
+console.log(oli["first" + nameKey]);
+console.log(oli["last" + nameKey]);
