@@ -115,30 +115,54 @@
 // ];
 // console.log(ages);
 
-const friends = ["Oli", "Robin", "Antu"];
+//const friends = ["Oli", "Robin", "Antu"];
 
 //Add element to the array
-friends.push("Hridoy");
+// friends.push("Hridoy");
 
-console.log(friends);
+// console.log(friends);
 
-friends.unshift("Nick"); //Add to the first index of the array
-console.log(friends);
+// friends.unshift("Nick"); //Add to the first index of the array
+// console.log(friends);
 
 //remove element from array
 
-friends.pop();
-console.log(friends);
+// friends.pop();
+// console.log(friends);
 
-friends.shift(); //remove first element
-console.log(friends);
+// friends.shift(); //remove first element
+// console.log(friends);
 
-console.log(friends.indexOf("Robin"));
-console.log(friends.indexOf("saif"));
+// console.log(friends.indexOf("Robin"));
+// console.log(friends.indexOf("saif"));
 
-console.log(friends.includes("Oli"));
-console.log(friends.includes("Saif"));
+// console.log(friends.includes("Oli"));
+// console.log(friends.includes("Saif"));
 
-if (friends.includes("Antu")) {
-  console.log("You have a friend called Antu");
-}
+// if (friends.includes("Antu")) {
+//   console.log("You have a friend called Antu");
+// }
+
+//Coding challenge 2 array
+
+const calcTip = (billValue) => {
+  const fifteenPercentTip = billValue * (15 / 100);
+  const twentyPercentTip = billValue * (20 / 100);
+
+  if (billValue >= 50 && billValue <= 300) {
+    const tip = fifteenPercentTip;
+    return tip;
+  } else {
+    return (tip = twentyPercentTip);
+  }
+};
+
+const bills = [125, 555, 44];
+console.log(bills[0]);
+
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+console.log(tips);
+
+const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+console.log(total);
