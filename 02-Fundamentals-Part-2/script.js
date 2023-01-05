@@ -145,24 +145,37 @@
 
 //Coding challenge 2 array
 
-const calcTip = (billValue) => {
-  const fifteenPercentTip = billValue * (15 / 100);
-  const twentyPercentTip = billValue * (20 / 100);
+// const calcTip = (billValue) => {
+//   const fifteenPercentTip = billValue * (15 / 100);
+//   const twentyPercentTip = billValue * (20 / 100);
 
-  if (billValue >= 50 && billValue <= 300) {
-    const tip = fifteenPercentTip;
-    return tip;
-  } else {
-    return (tip = twentyPercentTip);
-  }
-};
+//   if (billValue >= 50 && billValue <= 300) {
+//     const tip = fifteenPercentTip;
+//     return tip;
+//   } else {
+//     return (tip = twentyPercentTip);
+//   }
+// };
 
-const bills = [125, 555, 44];
-console.log(bills[0]);
+// const bills = [125, 555, 44];
+// console.log(bills[0]);
 
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
-console.log(tips);
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// console.log(tips);
 
-const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+// const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
-console.log(total);
+// console.log(total);
+
+//js objects
+
+// const oli = {
+//   firstName: "oli",
+//   lastName: "ullah",
+//   age: 2023 - 1996,
+//   profefssion: "Software Engineer",
+//   friends: ["Nick", "robin", "antu"],
+// };
+
+// console.log(oli.firstName);
+// console.log(oli["lastName"]);
