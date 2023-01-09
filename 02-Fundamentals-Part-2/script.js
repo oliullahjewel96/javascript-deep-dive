@@ -195,3 +195,7 @@ oli.location = "bangladesh";
 oli.twitter = "oliullah_Jewel";
 
 console.log(oli);
+
+console.log(
+  `oli has ${oli.friends.length} friends and his best friend is ${oli.friends[0]}`
+);
