@@ -180,13 +180,18 @@ const oli = {
 // console.log(oli.firstName);
 // console.log(oli["lastName"]);
 
-const nameKey = "Name";
+// const nameKey = "Name";
 
-console.log(oli["first" + nameKey]);
-console.log(oli["last" + nameKey]);
+// console.log(oli["first" + nameKey]);
+// console.log(oli["last" + nameKey]);
 
-const interestedIn = prompt(
-  "What do you want to know about oli? Choose between first name, last name, age, profession, friends"
-);
+// const interestedIn = prompt(
+//   "What do you want to know about oli? Choose between first name, last name, age, profession, friends"
+// );
 
-console.log(oli[interestedIn]);
+// console.log(oli[interestedIn]);
+
+oli.location = "bangladesh";
+oli.twitter = "oliullah_Jewel";
+
+console.log(oli);
