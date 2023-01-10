@@ -199,20 +199,28 @@
 // console.log(
 //   `oli has ${oli.friends.length} friends and his best friend is ${oli.friends[0]}`
 // );
-const oli = {
-  firstName: "oli",
-  lastName: "ullah",
-  age: 2023 - 1996,
-  profession: "Software Engineer",
-  friends: ["Nick", "robin", "antu"],
-  hasDriverLicense: false,
-  // calcAge: function (birthYear) {
-  //   return 2023 - birthYear;
-  // },
-  calcAge: function () {
-    console.log(this.age);
-    return this.age;
-  },
-};
+// const oli = {
+//   firstName: "oli",
+//   lastName: "ullah",
+//   age: 2023 - 1996,
+//   profession: "Software Engineer",
+//   friends: ["Nick", "robin", "antu"],
+//   hasDriverLicense: true,
+//   // calcAge: function (birthYear) {
+//   //   return 2023 - birthYear;
+//   // },
+//   calcAge: function () {
+//     console.log(this.age);
+//     return this.age;
+//   },
+//   getSummary: function () {
+//     if (this.hasDriverLicense) {
+//       return `${this.firstName} is a ${this.age} old ${this.profession}. He has a driver license`;
+//     } else {
+//       return `${this.firstName} is a ${this.age} old ${this.profession}. He has no driver license`;
+//     }
+//   },
+// };
 
-console.log(oli.calcAge());
+// console.log(oli.calcAge());
+// console.log(oli.getSummary());
