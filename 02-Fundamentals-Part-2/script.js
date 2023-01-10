@@ -224,3 +224,36 @@
 
 // console.log(oli.calcAge());
 // console.log(oli.getSummary());
+
+//coding challenge 3 object
+
+const john = {
+  fullName: "John Smith",
+  mass: 92,
+  height: 1.95,
+
+  calcBMI: function () {
+    this.BMI = this.mass / (this.height * this.height);
+    console.log(this.BMI);
+    return this.BMI;
+  },
+};
+const mark = {
+  fullName: "Mark Miller",
+  mass: 75,
+  height: 1.72,
+
+  calcBMI: function () {
+    this.BMI = this.mass / (this.height * this.height);
+    return this.BMI;
+  },
+};
+
+mark.calcBMI();
+john.calcBMI();
+const compareBMI =
+  mark.BMI > john.BMI
+    ? `${mark.fullName}'s BMI (${mark.BMI}) is higher than ${john.fullName}'s BMI (${john.BMI}) `
+    : `${john.fullName}'s BMI (${john.BMI}) is higher than ${mark.fullName}'s BMI (${mark.BMI})`;
+
+console.log(compareBMI);
