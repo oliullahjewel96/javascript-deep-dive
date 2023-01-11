@@ -227,33 +227,54 @@
 
 //coding challenge 3 object
 
-const john = {
-  fullName: "John Smith",
-  mass: 92,
-  height: 1.95,
+// const john = {
+//   fullName: "John Smith",
+//   mass: 92,
+//   height: 1.95,
 
-  calcBMI: function () {
-    this.BMI = this.mass / (this.height * this.height);
-    console.log(this.BMI);
-    return this.BMI;
-  },
-};
-const mark = {
-  fullName: "Mark Miller",
-  mass: 75,
-  height: 1.72,
+//   calcBMI: function () {
+//     this.BMI = this.mass / (this.height * this.height);
+//     console.log(this.BMI);
+//     return this.BMI;
+//   },
+// };
+// const mark = {
+//   fullName: "Mark Miller",
+//   mass: 75,
+//   height: 1.72,
 
-  calcBMI: function () {
-    this.BMI = this.mass / (this.height * this.height);
-    return this.BMI;
-  },
-};
+//   calcBMI: function () {
+//     this.BMI = this.mass / (this.height * this.height);
+//     return this.BMI;
+//   },
+// };
 
-mark.calcBMI();
-john.calcBMI();
-const compareBMI =
-  mark.BMI > john.BMI
-    ? `${mark.fullName}'s BMI (${mark.BMI}) is higher than ${john.fullName}'s BMI (${john.BMI}) `
-    : `${john.fullName}'s BMI (${john.BMI}) is higher than ${mark.fullName}'s BMI (${mark.BMI})`;
+// mark.calcBMI();
+// john.calcBMI();
+// const compareBMI =
+//   mark.BMI > john.BMI
+//     ? `${mark.fullName}'s BMI (${mark.BMI}) is higher than ${john.fullName}'s BMI (${john.BMI}) `
+//     : `${john.fullName}'s BMI (${john.BMI}) is higher than ${mark.fullName}'s BMI (${mark.BMI})`;
 
-console.log(compareBMI);
+// console.log(compareBMI);
+
+//loop
+
+const oli = [
+  "Oli",
+  "Ullah",
+  2023 - 1996,
+  "Software Engineer",
+  (friends = ["Robin", "Antu", "Nick"]),
+];
+
+let types = [];
+
+for (let i = 0; i < oli.length; i++) {
+  //Reading array
+  console.log(oli[i]);
+
+  //filling array
+  types[i] = typeof oli[i];
+}
+console.log(types);
