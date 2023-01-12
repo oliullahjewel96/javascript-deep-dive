@@ -268,13 +268,25 @@ const oli = [
   (friends = ["Robin", "Antu", "Nick"]),
 ];
 
-let types = [];
+// let types = [];
+
+// for (let i = 0; i < oli.length; i++) {
+//   //Reading array
+//   console.log(oli[i]);
+
+//   //filling array
+//   //   types[i] = typeof oli[i];
+//   types.push(typeof oli[i]);
+// }
+// console.log(types);
+
+console.log("----ONLY STRINGS-----");
+for (let i = 0; i < oli.length; i++) {
+  if (typeof oli[i] !== "string") continue;
+  console.log(oli[i], typeof oli[i]);
+}
 
 for (let i = 0; i < oli.length; i++) {
-  //Reading array
-  console.log(oli[i]);
-
-  //filling array
-  types[i] = typeof oli[i];
+  if (typeof oli[i] == "number") break;
+  console.log(oli[i], typeof oli[i]);
 }
-console.log(types);
