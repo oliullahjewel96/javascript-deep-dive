@@ -260,13 +260,13 @@
 
 //loop
 
-const oli = [
-  "Oli",
-  "Ullah",
-  2023 - 1996,
-  "Software Engineer",
-  (friends = ["Robin", "Antu", "Nick"]),
-];
+// const oli = [
+//   "Oli",
+//   "Ullah",
+//   2023 - 1996,
+//   "Software Engineer",
+//   (friends = ["Robin", "Antu", "Nick"]),
+// ];
 
 // let types = [];
 
@@ -280,13 +280,54 @@ const oli = [
 // }
 // console.log(types);
 
-console.log("----ONLY STRINGS-----");
-for (let i = 0; i < oli.length; i++) {
-  if (typeof oli[i] !== "string") continue;
-  console.log(oli[i], typeof oli[i]);
+// console.log("----ONLY STRINGS-----");
+// for (let i = 0; i < oli.length; i++) {
+//   if (typeof oli[i] !== "string") continue;
+//   console.log(oli[i], typeof oli[i]);
+// }
+
+// for (let i = 0; i < oli.length; i++) {
+//   if (typeof oli[i] == "number") break;
+//   console.log(oli[i], typeof oli[i]);
+// }
+
+//Coding challenge for loop
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+const tips = [];
+const totals = [];
+
+const calcTip = (billValue) => {
+  const fifteenPercentTip = billValue * (15 / 100);
+  const twentyPercentTip = billValue * (20 / 100);
+
+  if (billValue >= 50 && billValue <= 300) {
+    const tip = fifteenPercentTip;
+    return tip;
+  } else {
+    return (tip = twentyPercentTip);
+  }
+};
+
+for (let i = 0; i < bills.length; i++) {
+  tips.push(calcTip(bills[i]));
+  totals[i] = tips[i] + bills[i];
 }
 
-for (let i = 0; i < oli.length; i++) {
-  if (typeof oli[i] == "number") break;
-  console.log(oli[i], typeof oli[i]);
-}
+console.log(tips);
+console.log(totals);
+
+const calcAverage = (arr) => {
+  let sum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
+  }
+  console.log(sum);
+  let average = sum / arr.length;
+  return average;
+};
+
+let finalAverageValue = calcAverage(bills);
+console.log(finalAverageValue);
