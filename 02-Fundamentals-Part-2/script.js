@@ -293,41 +293,57 @@
 
 //Coding challenge for loop
 
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 
-const tips = [];
-const totals = [];
+// const tips = [];
+// const totals = [];
 
-const calcTip = (billValue) => {
-  const fifteenPercentTip = billValue * (15 / 100);
-  const twentyPercentTip = billValue * (20 / 100);
+// const calcTip = (billValue) => {
+//   const fifteenPercentTip = billValue * (15 / 100);
+//   const twentyPercentTip = billValue * (20 / 100);
 
-  if (billValue >= 50 && billValue <= 300) {
-    const tip = fifteenPercentTip;
-    return tip;
-  } else {
-    return (tip = twentyPercentTip);
-  }
-};
+//   if (billValue >= 50 && billValue <= 300) {
+//     const tip = fifteenPercentTip;
+//     return tip;
+//   } else {
+//     return (tip = twentyPercentTip);
+//   }
+// };
 
-for (let i = 0; i < bills.length; i++) {
-  tips.push(calcTip(bills[i]));
-  totals[i] = tips[i] + bills[i];
-}
+// for (let i = 0; i < bills.length; i++) {
+//   tips.push(calcTip(bills[i]));
+//   totals[i] = tips[i] + bills[i];
+// }
 
-console.log(tips);
-console.log(totals);
+// console.log(tips);
+// console.log(totals);
 
-const calcAverage = (arr) => {
-  let sum = 0;
+// const calcAverage = (arr) => {
+//   let sum = 0;
 
+//   for (let i = 0; i < arr.length; i++) {
+//     sum = sum + arr[i];
+//   }
+//   console.log(sum);
+//   let average = sum / arr.length;
+//   return average;
+// };
+
+// let finalAverageValue = calcAverage(bills);
+// console.log(finalAverageValue);
+
+// Coding challenge
+
+//write a printForecast function which takes an array as parameter
+
+const printForecast = (arr) => {
+  //write a loop to get all the index data from array
+  let str = "";
   for (let i = 0; i < arr.length; i++) {
-    sum = sum + arr[i];
+    str = str + `...${arr[i]}C in ${i + 1} days`;
   }
-  console.log(sum);
-  let average = sum / arr.length;
-  return average;
+  console.log(str);
 };
 
-let finalAverageValue = calcAverage(bills);
-console.log(finalAverageValue);
+printForecast([17, 21, 23]);
+printForecast([12, 5, -5, 0, 4]);
