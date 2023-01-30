@@ -5,17 +5,20 @@ let scoreOne = document.querySelector("#score--1");
 let dice = document.querySelector(".dice");
 const btnRoll = document.querySelector(".btn--roll");
 const currentZero = document.querySelector("#current--0");
+const playerActive = document.querySelector(".player");
 
 scoreZero.textContent = 0;
 scoreOne.textContent = 0;
 dice.classList.add("hidden");
-
+let sum = 0;
 const rollDice = () => {
   let randomNumber = Math.trunc(Math.random() * 6 + 1);
+
   console.log(randomNumber);
   if (randomNumber === 1) {
     dice.classList.remove("hidden");
     dice.src = "dice-1.png";
+    playerActive.classList.remove("player--active");
   } else if (randomNumber === 2) {
     dice.classList.remove("hidden");
     dice.src = "dice-2.png";
@@ -32,6 +35,8 @@ const rollDice = () => {
     dice.classList.remove("hidden");
     dice.src = "dice-6.png";
   }
+  sum = sum + randomNumber;
+  currentZero.textContent = sum;
 };
 
 // let randomDiceNumber = rollDice();
