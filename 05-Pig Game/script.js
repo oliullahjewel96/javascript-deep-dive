@@ -6,7 +6,9 @@ let dice = document.querySelector(".dice");
 const btnRoll = document.querySelector(".btn--roll");
 const currentZero = document.getElementById("current--0");
 const currentOne = document.getElementById("current--1");
-
+const playerActive = document.querySelector(".player--active");
+const playerZero = document.querySelector(".player--0");
+const playerOne = document.querySelector(".player--1");
 scoreZero.textContent = 0;
 scoreOne.textContent = 0;
 dice.classList.add("hidden");
@@ -33,6 +35,13 @@ let rollDice = () => {
     sum = 0;
 
     activePlayer = activePlayer === 0 ? 1 : 0;
+  }
+  if (activePlayer === 1) {
+    playerZero.classList.remove("player--active");
+    playerOne.classList.add("player--active");
+  } else {
+    playerOne.classList.remove("player--active");
+    playerZero.classList.add("player--active");
   }
 };
 
