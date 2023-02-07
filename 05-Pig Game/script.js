@@ -67,7 +67,7 @@ const holdDice = () => {
       scores[activePlayer];
     console.log(scores);
     //check if player's score is >=100
-    if (scores[activePlayer] >= 10) {
+    if (scores[activePlayer] >= 100) {
       isPlaying = false;
       dice.classList.add("hidden");
       document
