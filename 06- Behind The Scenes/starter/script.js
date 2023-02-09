@@ -23,36 +23,50 @@
 
 //thid keyword
 
-console.log(this);
+// console.log(this);
 
-function calcAge(birthYear) {
-  console.log(2023 - birthYear);
-  console.log(this);
-}
+// function calcAge(birthYear) {
+//   console.log(2023 - birthYear);
+//   console.log(this);
+// }
 
-calcAge(1996);
+// calcAge(1996);
 
-const calcAgeArrow = (birthYear) => {
-  console.log(2023 - birthYear);
-  console.log(this);
-};
+// const calcAgeArrow = (birthYear) => {
+//   console.log(2023 - birthYear);
+//   console.log(this);
+// };
 
-calcAgeArrow(1995);
+// calcAgeArrow(1995);
+
+// const oli = {
+//   birthYear: 1996,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2023 - this.birthYear);
+//   },
+// };
+
+// oli.calcAge();
+
+// const muniya = {
+//   birthYear: 2001,
+// };
+
+// muniya.calcAge = oli.calcAge;
+
+// muniya.calcAge();
 
 const oli = {
+  firstName: "Oli",
   birthYear: 1996,
   calcAge: function () {
     console.log(this);
     console.log(2023 - this.birthYear);
   },
+  greet: () => {
+    console.log(`Hey ${this.firstName}`);
+  },
 };
 
-oli.calcAge();
-
-const muniya = {
-  birthYear: 2001,
-};
-
-muniya.calcAge = oli.calcAge;
-
-muniya.calcAge();
+oli.greet();
