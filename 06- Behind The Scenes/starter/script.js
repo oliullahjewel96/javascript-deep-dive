@@ -63,6 +63,12 @@ const oli = {
   calcAge: function () {
     console.log(this);
     console.log(2023 - this.birthYear);
+
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.birthYear >= 1981 && this.birthYear <= 1996);
+    };
+    isMillenial();
   },
   greet: function () {
     console.log(`Hey ${this.firstName}`);
@@ -73,3 +79,4 @@ const oli = {
 };
 
 oli.greet();
+oli.calcAge();
