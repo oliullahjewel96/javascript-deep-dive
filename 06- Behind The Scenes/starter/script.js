@@ -64,9 +64,12 @@ const oli = {
     console.log(this);
     console.log(2023 - this.birthYear);
   },
-  greet: () => {
+  greet: function () {
     console.log(`Hey ${this.firstName}`);
   },
+  // greet: () => {
+  //   console.log(`Hey ${this.firstName}`);
+  // },
 };
 
 oli.greet();
