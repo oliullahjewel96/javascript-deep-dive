@@ -57,26 +57,60 @@
 
 // muniya.calcAge();
 
-const oli = {
-  firstName: "Oli",
-  birthYear: 1996,
-  calcAge: function () {
-    console.log(this);
-    console.log(2023 - this.birthYear);
+// const oli = {
+//   firstName: "Oli",
+//   birthYear: 1996,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2023 - this.birthYear);
 
-    const isMillenial = () => {
-      console.log(this);
-      console.log(this.birthYear >= 1981 && this.birthYear <= 1996);
-    };
-    isMillenial();
-  },
-  greet: function () {
-    console.log(`Hey ${this.firstName}`);
-  },
-  // greet: () => {
-  //   console.log(`Hey ${this.firstName}`);
-  // },
+//     const isMillenial = () => {
+//       console.log(this);
+//       console.log(this.birthYear >= 1981 && this.birthYear <= 1996);
+//     };
+//     isMillenial();
+//   },
+//   greet: function () {
+//     console.log(`Hey ${this.firstName}`);
+//   },
+// greet: () => {
+//   console.log(`Hey ${this.firstName}`);
+// },
+// };
+
+// oli.greet();
+// oli.calcAge();
+
+//primitive type
+
+let age = 27;
+let oldAge = age;
+age = 28;
+console.log(age);
+console.log(oldAge);
+
+//reference type
+const me = {
+  firstName: "oli",
+  age: 27,
 };
 
-oli.greet();
-oli.calcAge();
+const friend = me;
+friend.age = 32;
+
+console.log("Friend: ", friend);
+console.log("Me: ", me);
+
+//copying object
+
+const robin = {
+  firstName: "Abdullah",
+  lastName: "Jobaer",
+  age: 28,
+};
+
+const marriedRobin = Object.assign({}, robin);
+marriedRobin.firstName = "Robin";
+
+console.log("Before Marriage: ", robin);
+console.log("After Marriage: ", marriedRobin);
