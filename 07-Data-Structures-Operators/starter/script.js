@@ -26,14 +26,22 @@ const restaurant = {
       close: 24,
     },
   },
+
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
 };
 
 //Array destructuring
 
-const array = [2, 3, 4];
-const [x, y, z] = array;
-console.log(x, y, z);
+// const array = [2, 3, 4];
+// const [x, y, z] = array;
+// console.log(x, y, z);
 
-const [first, , second] = restaurant.categories;
+// const [first, , second] = restaurant.categories;
 
-console.log(first, second);
+// console.log(first, second);
+
+const [starter, main] = restaurant.order(1, 0);
+
+console.log(starter, main);
