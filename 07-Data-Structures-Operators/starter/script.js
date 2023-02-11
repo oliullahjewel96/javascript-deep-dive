@@ -33,3 +33,7 @@ const restaurant = {
 const array = [2, 3, 4];
 const [x, y, z] = array;
 console.log(x, y, z);
+
+const [first, , second] = restaurant.categories;
+
+console.log(first, second);
