@@ -83,34 +83,34 @@
 
 //primitive type
 
-let age = 27;
-let oldAge = age;
-age = 28;
-console.log(age);
-console.log(oldAge);
+// let age = 27;
+// let oldAge = age;
+// age = 28;
+// console.log(age);
+// console.log(oldAge);
 
-//reference type
-const me = {
-  firstName: "oli",
-  age: 27,
-};
+// //reference type
+// const me = {
+//   firstName: "oli",
+//   age: 27,
+// };
 
-const friend = me;
-friend.age = 32;
+// const friend = me;
+// friend.age = 32;
 
-console.log("Friend: ", friend);
-console.log("Me: ", me);
+// console.log("Friend: ", friend);
+// console.log("Me: ", me);
 
-//copying object
+// //copying object
 
-const robin = {
-  firstName: "Abdullah",
-  lastName: "Jobaer",
-  age: 28,
-};
+// const robin = {
+//   firstName: "Abdullah",
+//   lastName: "Jobaer",
+//   age: 28,
+// };
 
-const marriedRobin = Object.assign({}, robin);
-marriedRobin.firstName = "Robin";
+// const marriedRobin = Object.assign({}, robin); // Only shallow copy the object
+// marriedRobin.firstName = "Robin";
 
-console.log("Before Marriage: ", robin);
-console.log("After Marriage: ", marriedRobin);
+// console.log("Before Marriage: ", robin);
+// console.log("After Marriage: ", marriedRobin);
