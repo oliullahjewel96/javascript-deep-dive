@@ -31,7 +31,21 @@ const restaurant = {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 };
+//Destructuring objects
 
+const { name, openingHours, categories } = restaurant;
+
+console.log(name);
+console.log(openingHours);
+console.log(categories);
+
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
+
+console.log(restaurantName, hours, tags);
 //Array destructuring
 
 // const array = [2, 3, 4];
@@ -46,12 +60,12 @@ const restaurant = {
 
 // console.log(starter, main);
 
-const nested = [2, 4, [5, 6]];
-const [i, , [j, k]] = nested;
+// const nested = [2, 4, [5, 6]];
+// const [i, , [j, k]] = nested;
 
-console.log(i, j, k);
+// console.log(i, j, k);
 
-//default values in array destructuring
+// //default values in array destructuring
 
-const [p = 1, q = 1, r = 1] = [8, 9];
-console.log(p, q, r);
+// const [p = 1, q = 1, r = 1] = [8, 9];
+// console.log(p, q, r);
