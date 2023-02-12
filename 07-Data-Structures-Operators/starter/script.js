@@ -42,6 +42,11 @@ const restaurant = {
 
 // console.log(first, second);
 
-const [starter, main] = restaurant.order(1, 0);
+// const [starter, main] = restaurant.order(1, 0);
 
-console.log(starter, main);
+// console.log(starter, main);
+
+const nested = [2, 4, [5, 6]];
+const [i, , [j, k]] = nested;
+
+console.log(i, j, k);
