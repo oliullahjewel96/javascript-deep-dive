@@ -62,6 +62,14 @@ const obj = { a: 23, b: 7, c: 14 };
 ({ a, b } = obj);
 
 console.log(a, b);
+
+//nested object destructuring
+
+const {
+  fri: { open, close },
+} = openingHours;
+
+console.log(open, close);
 //Array destructuring
 
 // const array = [2, 3, 4];
