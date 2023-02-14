@@ -152,6 +152,39 @@ const restaurant = {
 
 // restaurant.orderPasta(...ingredients);
 
-const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
+// const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
 
-console.log(newRestaurant);
+// console.log(newRestaurant);
+
+//REST operators
+
+const arr = [1, 2, 3, 4, 5];
+
+const [a, b, ...others] = arr;
+
+console.log(a, b, others);
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+console.log(pizza, risotto, otherFood);
+
+const { fri, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+
+const add = function (...numbers) {
+  let sum = 0;
+
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  console.log(sum);
+};
+
+add(1, 2);
+add(1, 2, 3, 4, 5, 6, 7, 8);
+add(1, 2, 3, 4, 5, 6, 7, 8, 9);
+
+const x = [2, 33, 45];
+add(...x);
