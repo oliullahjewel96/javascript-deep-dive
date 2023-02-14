@@ -38,51 +38,51 @@ const restaurant = {
   },
 };
 
-restaurant.orderDelivery({
-  time: '10:30PM',
-  address: 'Bashundhara R/A',
-  starterIndex: 2,
-  mainIndex: 2,
-});
-//Destructuring objects
+// restaurant.orderDelivery({
+//   time: '10:30PM',
+//   address: 'Bashundhara R/A',
+//   starterIndex: 2,
+//   mainIndex: 2,
+// });
+// //Destructuring objects
 
-const { name, openingHours, categories } = restaurant;
+// const { name, openingHours, categories } = restaurant;
 
-console.log(name);
-console.log(openingHours);
-console.log(categories);
+// console.log(name);
+// console.log(openingHours);
+// console.log(categories);
 
-const {
-  name: restaurantName,
-  openingHours: hours,
-  categories: tags,
-} = restaurant;
+// const {
+//   name: restaurantName,
+//   openingHours: hours,
+//   categories: tags,
+// } = restaurant;
 
-console.log(restaurantName, hours, tags);
+// console.log(restaurantName, hours, tags);
 
-const { menu = [], starterMenu: starters = [] } = restaurant;
+// const { menu = [], starterMenu: starters = [] } = restaurant;
 
-console.log(menu, starters);
+// console.log(menu, starters);
 
-//Mutating variables
+// //Mutating variables
 
-let a = 111;
-let b = 222;
+// let a = 111;
+// let b = 222;
 
-const obj = { a: 23, b: 7, c: 14 };
-//mutating
+// const obj = { a: 23, b: 7, c: 14 };
+// //mutating
 
-({ a, b } = obj);
+// ({ a, b } = obj);
 
-console.log(a, b);
+// console.log(a, b);
 
-//nested object destructuring
+// //nested object destructuring
 
-const {
-  fri: { open, close },
-} = openingHours;
+// const {
+//   fri: { open, close },
+// } = openingHours;
 
-console.log(open, close);
+// console.log(open, close);
 //Array destructuring
 
 // const array = [2, 3, 4];
@@ -106,3 +106,15 @@ console.log(open, close);
 
 // const [p = 1, q = 1, r = 1] = [8, 9];
 // console.log(p, q, r);
+
+//spread opeartor
+
+const arr = [3, 4, 5];
+
+const newArr = [1, 2, ...arr];
+
+console.log(newArr);
+
+const newMenu = [...restaurant.mainMenu, 'Burger'];
+
+console.log(newMenu);
