@@ -191,22 +191,29 @@ const restaurant = {
 
 //short circuiting
 
-console.log(3 || 'Oli');
-console.log('' || 'oli');
-console.log(true || 0);
-console.log(undefined || null);
-console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+// console.log(3 || 'Oli');
+// console.log('' || 'oli');
+// console.log(true || 0);
+// console.log(undefined || null);
+// console.log(undefined || 0 || '' || 'Hello' || 23 || null);
 
-const guest1 = restaurant.numGuest ? restaurant.numGuest : 10;
-console.log(guest1); // can be written as below mentioned expression
+// const guest1 = restaurant.numGuest ? restaurant.numGuest : 10;
+// console.log(guest1); // can be written as below mentioned expression
 
-const guest2 = restaurant.numGuest || 56;
-console.log(guest2);
+// const guest2 = restaurant.numGuest || 56;
+// console.log(guest2);
 
-//And operators
-console.log('------And Operator----');
-console.log(3 && 'Oli');
-console.log('' && 'oli');
-console.log(true && 0);
-console.log(undefined && null);
-console.log(undefined && 0 && '' && 'Hello' && 23 && null);
+// //And operators
+// console.log('------And Operator----');
+// console.log(3 && 'Oli');
+// console.log('' && 'oli');
+// console.log(true && 0);
+// console.log(undefined && null);
+// console.log(undefined && 0 && '' && 'Hello' && 23 && null);
+
+//Nullish coalescing operator
+//Nullish: null and undefined (NOT 0 or "")
+restaurant.numGuests = 0;
+
+const guestsCorrect = restaurant.numGuests ?? 10;
+console.log(guestsCorrect);
