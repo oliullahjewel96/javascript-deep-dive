@@ -158,33 +158,55 @@ const restaurant = {
 
 //REST operators
 
-const arr = [1, 2, 3, 4, 5];
+// const arr = [1, 2, 3, 4, 5];
 
-const [a, b, ...others] = arr;
+// const [a, b, ...others] = arr;
 
-console.log(a, b, others);
+// console.log(a, b, others);
 
-const [pizza, , risotto, ...otherFood] = [
-  ...restaurant.mainMenu,
-  ...restaurant.starterMenu,
-];
-console.log(pizza, risotto, otherFood);
+// const [pizza, , risotto, ...otherFood] = [
+//   ...restaurant.mainMenu,
+//   ...restaurant.starterMenu,
+// ];
+// console.log(pizza, risotto, otherFood);
 
-const { fri, ...weekdays } = restaurant.openingHours;
-console.log(weekdays);
+// const { fri, ...weekdays } = restaurant.openingHours;
+// console.log(weekdays);
 
-const add = function (...numbers) {
-  let sum = 0;
+// const add = function (...numbers) {
+//   let sum = 0;
 
-  for (let i = 0; i < numbers.length; i++) {
-    sum += numbers[i];
-  }
-  console.log(sum);
-};
+//   for (let i = 0; i < numbers.length; i++) {
+//     sum += numbers[i];
+//   }
+//   console.log(sum);
+// };
 
-add(1, 2);
-add(1, 2, 3, 4, 5, 6, 7, 8);
-add(1, 2, 3, 4, 5, 6, 7, 8, 9);
+// add(1, 2);
+// add(1, 2, 3, 4, 5, 6, 7, 8);
+// add(1, 2, 3, 4, 5, 6, 7, 8, 9);
 
-const x = [2, 33, 45];
-add(...x);
+// const x = [2, 33, 45];
+// add(...x);
+
+//short circuiting
+
+console.log(3 || 'Oli');
+console.log('' || 'oli');
+console.log(true || 0);
+console.log(undefined || null);
+console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+const guest1 = restaurant.numGuest ? restaurant.numGuest : 10;
+console.log(guest1); // can be written as below mentioned expression
+
+const guest2 = restaurant.numGuest || 56;
+console.log(guest2);
+
+//And operators
+console.log('------And Operator----');
+console.log(3 && 'Oli');
+console.log('' && 'oli');
+console.log(true && 0);
+console.log(undefined && null);
+console.log(undefined && 0 && '' && 'Hello' && 23 && null);
