@@ -30,7 +30,20 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+
+  orderDelivery: function ({ starterIndex, mainIndex, address, time }) {
+    console.log(
+      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+    );
+  },
 };
+
+restaurant.orderDelivery({
+  time: '10:30PM',
+  address: 'Bashundhara R/A',
+  starterIndex: 2,
+  mainIndex: 2,
+});
 //Destructuring objects
 
 const { name, openingHours, categories } = restaurant;
