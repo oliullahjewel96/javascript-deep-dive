@@ -109,12 +109,24 @@ const restaurant = {
 
 //spread opeartor
 
-const arr = [3, 4, 5];
+// const arr = [3, 4, 5];
 
-const newArr = [1, 2, ...arr];
+// const newArr = [1, 2, ...arr];
 
-console.log(newArr);
+// console.log(newArr);
 
-const newMenu = [...restaurant.mainMenu, 'Burger'];
+// const newMenu = [...restaurant.mainMenu, 'Burger'];
 
-console.log(newMenu);
+// console.log(newMenu);
+
+//shallow copy of array
+
+const mainMenuCopy = [...restaurant.mainMenu];
+
+console.log(mainMenuCopy);
+
+//merging two array
+
+const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+
+console.log(menu);
