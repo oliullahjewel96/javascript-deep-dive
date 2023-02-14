@@ -50,6 +50,18 @@ console.log(restaurantName, hours, tags);
 const { menu = [], starterMenu: starters = [] } = restaurant;
 
 console.log(menu, starters);
+
+//Mutating variables
+
+let a = 111;
+let b = 222;
+
+const obj = { a: 23, b: 7, c: 14 };
+//mutating
+
+({ a, b } = obj);
+
+console.log(a, b);
 //Array destructuring
 
 // const array = [2, 3, 4];
