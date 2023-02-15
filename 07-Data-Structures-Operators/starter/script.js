@@ -213,7 +213,31 @@ const restaurant = {
 
 //Nullish coalescing operator
 //Nullish: null and undefined (NOT 0 or "")
-restaurant.numGuests = 0;
+// restaurant.numGuests = 0;
 
-const guestsCorrect = restaurant.numGuests ?? 10;
-console.log(guestsCorrect);
+// const guestsCorrect = restaurant.numGuests ?? 10;
+// console.log(guestsCorrect);
+
+//logical assignment operator
+
+const rest1 = {
+  name: 'Spicy Easy',
+  //numGuests: 20,
+  numGuests: 0,
+};
+
+const rest2 = {
+  name: 'Burger King',
+  owner: 'Oli',
+};
+
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
+
+// rest1.numGuests ||= 10;
+// rest2.numGuests ||= 10;
+
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+console.log(rest1);
+console.log(rest2);
