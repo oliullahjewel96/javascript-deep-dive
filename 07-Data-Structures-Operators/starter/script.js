@@ -220,16 +220,16 @@ const restaurant = {
 
 //logical assignment operator
 
-const rest1 = {
-  name: 'Spicy Easy',
-  //numGuests: 20,
-  numGuests: 0,
-};
+// const rest1 = {
+//   name: 'Spicy Easy',
+//   //numGuests: 20,
+//   numGuests: 0,
+// };
 
-const rest2 = {
-  name: 'Burger King',
-  owner: 'Oli',
-};
+// const rest2 = {
+//   name: 'Burger King',
+//   owner: 'Oli',
+// };
 
 // rest1.numGuests = rest1.numGuests || 10;
 // rest2.numGuests = rest2.numGuests || 10;
@@ -243,8 +243,90 @@ const rest2 = {
 // rest1.owner = rest1.owner && '<ANONYMOUS>';
 // rest2.owner = rest2.owner && '<ANONYMOUS>';
 
-rest1.owner &&= '<ANONYMOUS>';
-rest2.owner &&= '<ANONYMOUS>';
+// rest1.owner &&= '<ANONYMOUS>';
+// rest2.owner &&= '<ANONYMOUS>';
 
-console.log(rest1);
-console.log(rest2);
+// console.log(rest1);
+// console.log(rest2);
+
+//The coding challenge
+
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+  printGoals: function (...playerNames) {
+    for (let i = 0; i < playerNames.length; i++) {
+      console.log(playerNames[i]);
+    }
+    console.log(`${playerNames.length} goals were scored`);
+  },
+};
+
+// solution of question 1
+
+const [player1, player2] = [game.players[0], game.players[1]];
+console.log(player1, player2);
+// solution of question 2
+const [gk, ...fieldPlayers] = player1;
+
+console.log(gk);
+console.log(fieldPlayers);
+
+// solution of question 3
+const [...allPlayers] = [...player1, ...player2];
+
+console.log(allPlayers);
+// solution of question 4
+const players1Final = [...player1, 'Thiago', 'Coutinho', 'Perisic'];
+
+console.log(players1Final);
+
+// solution of question 5
+const { team1, x: draw, team2 } = game.odds;
+// const { x: draw, } = game.odds;
+
+console.log(team1, draw, team2);
+
+// solution of question 6
+game.printGoals('Firmino', 'Alisson', 'Van Dijk', 'Jota', 'Diaz');
+game.printGoals(...game.scored);
+
+// solution of question 7
+team1 < team2 && console.log('Team 1 is more likely to win');
+team1 > team2 && console.log('Team 2 more likely to win');
