@@ -300,33 +300,41 @@ const game = {
 
 // solution of question 1
 
-const [player1, player2] = [game.players[0], game.players[1]];
-console.log(player1, player2);
+// const [player1, player2] = [game.players[0], game.players[1]];
+// console.log(player1, player2);
 // solution of question 2
-const [gk, ...fieldPlayers] = player1;
+// const [gk, ...fieldPlayers] = player1;
 
-console.log(gk);
-console.log(fieldPlayers);
+// console.log(gk);
+// console.log(fieldPlayers);
 
 // solution of question 3
-const [...allPlayers] = [...player1, ...player2];
+// const [...allPlayers] = [...player1, ...player2];
 
-console.log(allPlayers);
+// console.log(allPlayers);
 // solution of question 4
-const players1Final = [...player1, 'Thiago', 'Coutinho', 'Perisic'];
+// const players1Final = [...player1, 'Thiago', 'Coutinho', 'Perisic'];
 
-console.log(players1Final);
+// console.log(players1Final);
 
 // solution of question 5
-const { team1, x: draw, team2 } = game.odds;
+// const { team1, x: draw, team2 } = game.odds;
 // const { x: draw, } = game.odds;
 
-console.log(team1, draw, team2);
+// console.log(team1, draw, team2);
 
 // solution of question 6
-game.printGoals('Firmino', 'Alisson', 'Van Dijk', 'Jota', 'Diaz');
-game.printGoals(...game.scored);
+// game.printGoals('Firmino', 'Alisson', 'Van Dijk', 'Jota', 'Diaz');
+// game.printGoals(...game.scored);
 
 // solution of question 7
-team1 < team2 && console.log('Team 1 is more likely to win');
-team1 > team2 && console.log('Team 2 more likely to win');
+// team1 < team2 && console.log('Team 1 is more likely to win');
+// team1 > team2 && console.log('Team 2 more likely to win');
+
+//Looping arrays --- for of loop
+
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+for (const item of menu) {
+  console.log(item);
+}
