@@ -342,3 +342,6 @@ for (const item of menu) {
 for (const item of menu.entries()) {
   console.log(item);
 }
+for (const [i, el] of menu.entries()) {
+  console.log(`${i + 1}: ${el}`);
+}
