@@ -348,9 +348,13 @@ const restaurant = {
 //   console.log(`${i + 1}: ${el}`);
 // }
 
-const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+// const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 
-for (const day of days) {
-  const open = restaurant.openingHours[day]?.open;
-  console.log(`On ${day}, we open at ${open}`);
-}
+// for (const day of days) {
+//   const open = restaurant.openingHours[day]?.open;
+//   console.log(`On ${day}, we open at ${open}`);
+// }
+
+const users = [{ name: 'Oli', email: 'oli@decathlon.com' }];
+
+console.log(users[0]?.name ?? 'User does not exists');
