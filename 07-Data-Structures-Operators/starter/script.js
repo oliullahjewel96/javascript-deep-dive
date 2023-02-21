@@ -451,8 +451,14 @@ const [...scored] = game.scored;
 
 // console.log(scorer);
 
-// const scorers = {};
-// for (const player of game.scored) {
-//   scorers[player] ? scorers[player]++ : (scorers[player] = 1);
-// }
-// console.log(scorers);
+//set datastructure
+
+// const ordersSet = new Set(['pizza', 'cheese', 'Coke', 'pizza', 'cheese']);
+// console.log(ordersSet);
+// console.log(ordersSet.size);
+// console.log(ordersSet.has('pizza'));
+// console.log(ordersSet.has('Bread'));
+// ordersSet.add('Garlic Bread');
+// ordersSet.add('Garlic Bread');
+// ordersSet.delete('pizza');
+// console.log(ordersSet);
