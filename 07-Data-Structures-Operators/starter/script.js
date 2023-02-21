@@ -46,27 +46,27 @@ const restaurant = {
 };
 
 //Property Names
-const properties = Object.keys(openingHours);
+// const properties = Object.keys(openingHours);
 
-console.log(properties);
+// console.log(properties);
 
-let openStr = `We are open on ${properties.length} days: `;
+// let openStr = `We are open on ${properties.length} days: `;
 
-for (const day of properties) {
-  openStr += `${day},`;
-}
+// for (const day of properties) {
+//   openStr += `${day},`;
+// }
 
-console.log(openStr);
-//Property Values
-const value = Object.values(openingHours);
-// console.log(value);
-//Entire object
-const entries = Object.entries(openingHours);
-// console.log(entries);
+// console.log(openStr);
+// //Property Values
+// const value = Object.values(openingHours);
+// // console.log(value);
+// //Entire object
+// const entries = Object.entries(openingHours);
+// // console.log(entries);
 
-for (const [day, { open, close }] of entries) {
-  console.log(`On ${day} we are open at ${open} and close at ${close}`);
-}
+// for (const [day, { open, close }] of entries) {
+//   console.log(`On ${day} we are open at ${open} and close at ${close}`);
+// }
 // restaurant.orderDelivery({
 //   time: '10:30PM',
 //   address: 'Bashundhara R/A',
@@ -380,3 +380,77 @@ for (const [day, { open, close }] of entries) {
 // const users = [{ name: 'Oli', email: 'oli@decathlon.com' }];
 
 // console.log(users[0]?.name ?? 'User does not exists');
+
+// Coding challenge 2
+
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+};
+
+//1
+const [...scored] = game.scored;
+console.log(scored);
+for (const [number, scorer] of Object.entries(scored)) {
+  let intNumber = Number(number);
+  console.log(`Goal ${intNumber + 1}: ${scorer}`);
+}
+
+//2
+let average = 0;
+const gameOdds = Object.values(game.odds);
+console.log(gameOdds);
+for (const odd of gameOdds) {
+  average = average + odd / gameOdds.length;
+}
+console.log(average);
+// console.log(team1, team2);
+
+for (const [team, values] of Object.entries(game.odds)) {
+  const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
+  console.log(`Odd for ${teamStr} : ${values} \n`);
+}
+
+// const scorer = Object.assign({}, scored);
+
+// console.log(scorer);
+// for (let [scorer, values] of scored.entries()) {
+//   const scorers = Object.assign({ values });
+//   console.log(scorers);
+// }
