@@ -45,6 +45,28 @@ const restaurant = {
   },
 };
 
+//Property Names
+const properties = Object.keys(openingHours);
+
+console.log(properties);
+
+let openStr = `We are open on ${properties.length} days: `;
+
+for (const day of properties) {
+  openStr += `${day},`;
+}
+
+console.log(openStr);
+//Property Values
+const value = Object.values(openingHours);
+// console.log(value);
+//Entire object
+const entries = Object.entries(openingHours);
+// console.log(entries);
+
+for (const [day, { open, close }] of entries) {
+  console.log(`On ${day} we are open at ${open} and close at ${close}`);
+}
 // restaurant.orderDelivery({
 //   time: '10:30PM',
 //   address: 'Bashundhara R/A',
@@ -355,6 +377,6 @@ const restaurant = {
 //   console.log(`On ${day}, we open at ${open}`);
 // }
 
-const users = [{ name: 'Oli', email: 'oli@decathlon.com' }];
+// const users = [{ name: 'Oli', email: 'oli@decathlon.com' }];
 
-console.log(users[0]?.name ?? 'User does not exists');
+// console.log(users[0]?.name ?? 'User does not exists');
