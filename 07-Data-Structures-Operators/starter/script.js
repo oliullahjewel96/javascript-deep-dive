@@ -462,3 +462,38 @@ const [...scored] = game.scored;
 // ordersSet.add('Garlic Bread');
 // ordersSet.delete('pizza');
 // console.log(ordersSet);
+
+//Working with string
+
+const airline = 'Bangladesh Biman';
+const plane = 'B379';
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log('B379'[0]);
+console.log(plane.length);
+
+console.log(airline.indexOf('h'));
+console.log(airline.lastIndexOf('n'));
+console.log(airline.indexOf('Biman'));
+console.log(airline.slice(11));
+console.log(airline.slice(11, 15));
+console.log(airline.slice(0, airline.indexOf(' ')));
+console.log(airline.slice(-2));
+console.log(airline.slice(1, -1));
+
+const checkMiddleSeat = seat => {
+  //B and E ate  middle seats
+  const s = seat.slice(-1);
+  if (s === 'B' || s === 'E') {
+    console.log('You have got the middle seat');
+  } else {
+    console.log('You are lucky');
+  }
+};
+
+checkMiddleSeat('11B');
+checkMiddleSeat('1C00');
+checkMiddleSeat('1CE');
+checkMiddleSeat('1CD');
