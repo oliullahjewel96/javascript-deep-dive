@@ -535,3 +535,12 @@ const [...scored] = game.scored;
 
 // capitalizeName('robin jobaer');
 // capitalizeName('oli ullah');
+
+const maskingCreditCard = number => {
+  const str = number + '';
+  const last = str.slice(-4);
+  return last.padStart(str.length, '*');
+};
+
+console.log(maskingCreditCard(3486738763729835687));
+console.log(maskingCreditCard('3486738763729835687'));
