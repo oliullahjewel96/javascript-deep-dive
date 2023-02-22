@@ -503,3 +503,21 @@ const [...scored] = game.scored;
 // const passengerCorrect =
 //   passengerLower[0].toUpperCase() + passengerLower.slice(1).toLowerCase();
 // console.log(passengerCorrect);
+
+//replace() stirng method
+
+// const priceGB = '288,97£';
+// const priceUS = priceGB.replace('£', '$').replace(',', '.');
+// console.log(priceUS);
+// const announcement =
+//   'All passengers come to the boarding door 23. Boarding door 23!';
+// console.log(announcement.replaceAll('door', 'gate'));
+
+//split()
+
+// console.log('a+very+beautiful+string'.split('+'));
+// console.log('Oli Ullah'.split(' '));
+
+// const [firstName, lastName] = 'Oli Ullah'.split(' ');
+// console.log(firstName);
+// console.log(lastName);
