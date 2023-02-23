@@ -14,7 +14,7 @@
 
 // createBooking('LH123');
 
-// const flight = 'LH123';
+// let flight = 'LH123';
 
 // const oli = {
 //   fullName: 'Oli Ullah',
