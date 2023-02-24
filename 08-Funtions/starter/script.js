@@ -37,26 +37,42 @@
 // console.log(flight);
 // console.log(oli);
 
-const oneWord = function (str) {
-  return str.replace(/ /g, ' ').toLowerCase();
-};
+// const oneWord = function (str) {
+//   return str.replace(/ /g, ' ').toLowerCase();
+// };
 
-console.log(oneWord('I want to be a Software Engineer'));
+// console.log(oneWord('I want to be a Software Engineer'));
 
-const upperFirstWord = function (str) {
-  const [first, ...others] = str.split(' ');
-  return [first.toUpperCase(), ...others].join(' ');
-};
+// const upperFirstWord = function (str) {
+//   const [first, ...others] = str.split(' ');
+//   return [first.toUpperCase(), ...others].join(' ');
+// };
 
-console.log(upperFirstWord('everyone wants to be a Software Engineer'));
+// console.log(upperFirstWord('everyone wants to be a Software Engineer'));
 
-//Higher order function
+// //Higher order function
 
-const trasnformer = function (str, callbackfn) {
-  console.log(`Original string: ${str}`);
-  console.log(`Transformed string: ${callbackfn(str)}`);
-  console.log(`Transformed by:${callbackfn.name}`);
-};
+// const trasnformer = function (str, callbackfn) {
+//   console.log(`Original string: ${str}`);
+//   console.log(`Transformed string: ${callbackfn(str)}`);
+//   console.log(`Transformed by:${callbackfn.name}`);
+// };
 
-trasnformer('Javascript is an awesome language', upperFirstWord);
-trasnformer('Javascript is an awesome language', oneWord);
+// trasnformer('Javascript is an awesome language', upperFirstWord);
+// trasnformer('Javascript is an awesome language', oneWord);
+
+// const greet = function (greeting) {
+//   return function (name) {
+//     console.log(`${greeting} ${name}`);
+//   };
+// };
+
+// const greeter = greet('Hey');
+// greeter('OLi');
+
+// const greet = greeting => {
+//   return name => console.log(`${greeting} ${name}`);
+// };
+
+// const greeter = greet('Hey');
+// greeter('oli');
