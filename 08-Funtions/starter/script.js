@@ -76,3 +76,36 @@
 
 // const greeter = greet('Hey');
 // greeter('oli');
+
+const flyemirates = {
+  airline: 'Emirates',
+  iataCode: 'ER',
+  bookings: [],
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode} ${flightNum}`
+    );
+    this.bookings.push({ flight: `${this.iataCode}${flightNum}`, name });
+  },
+};
+
+flyemirates.book(239, 'Oli Ullah');
+flyemirates.book(237, 'Muniya Nusrat');
+console.log(flyemirates);
+
+const etihad = {
+  airline: 'Etihad',
+  iataCode: 'ET',
+  bookings: [],
+};
+
+const book = flyemirates.book;
+
+//Does Not work
+//book(23, 'Lorin');
+
+book.call(etihad, 23, 'Lorin');
+console.log(etihad);
+
+book.call(flyemirates, 635, 'Robin');
+console.log(flyemirates);
