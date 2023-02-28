@@ -77,56 +77,66 @@
 // const greeter = greet('Hey');
 // greeter('oli');
 
-const flyemirates = {
-  airline: 'Emirates',
-  iataCode: 'ER',
-  bookings: [],
-  book(flightNum, name) {
-    console.log(
-      `${name} booked a seat on ${this.airline} flight ${this.iataCode} ${flightNum}`
-    );
-    this.bookings.push({ flight: `${this.iataCode}${flightNum}`, name });
-  },
-};
+// const flyemirates = {
+//   airline: 'Emirates',
+//   iataCode: 'ER',
+//   bookings: [],
+//   book(flightNum, name) {
+//     console.log(
+//       `${name} booked a seat on ${this.airline} flight ${this.iataCode} ${flightNum}`
+//     );
+//     this.bookings.push({ flight: `${this.iataCode}${flightNum}`, name });
+//   },
+// };
 
-flyemirates.book(239, 'Oli Ullah');
-flyemirates.book(237, 'Muniya Nusrat');
-console.log(flyemirates);
+// flyemirates.book(239, 'Oli Ullah');
+// flyemirates.book(237, 'Muniya Nusrat');
+// console.log(flyemirates);
 
-const etihad = {
-  airline: 'Etihad',
-  iataCode: 'ET',
-  bookings: [],
-};
+// const etihad = {
+//   airline: 'Etihad',
+//   iataCode: 'ET',
+//   bookings: [],
+// };
 
-const book = flyemirates.book;
+// const book = flyemirates.book;
 
 //Does Not work
 //book(23, 'Lorin');
 
-book.call(etihad, 23, 'Lorin');
-console.log(etihad);
+// book.call(etihad, 23, 'Lorin');
+// console.log(etihad);
 
-book.call(flyemirates, 635, 'Robin');
-console.log(flyemirates);
+// book.call(flyemirates, 635, 'Robin');
+// console.log(flyemirates);
 
 //Bind method
 
-const bookFE = book.bind(flyemirates);
-const bookER239 = book.bind(flyemirates, 239);
-bookER239('OLI ULLAH');
-bookER239('MUNIYA NUSRAT');
-bookFE(256, 'Arafat Antu');
+// const bookFE = book.bind(flyemirates);
+// const bookER239 = book.bind(flyemirates, 239);
+// bookER239('OLI ULLAH');
+// bookER239('MUNIYA NUSRAT');
+// bookFE(256, 'Arafat Antu');
 
-flyemirates.planes = 300;
+// flyemirates.planes = 300;
 
-flyemirates.buyPlane = function () {
-  console.log(this);
+// flyemirates.buyPlane = function () {
+//   console.log(this);
 
-  this.planes++;
-  console.log(this.planes);
-};
+//   this.planes++;
+//   console.log(this.planes);
+// };
 
-document
-  .querySelector('.buy')
-  .addEventListener('click', flyemirates.buyPlane.bind(flyemirates));
+// document
+//   .querySelector('.buy')
+//   .addEventListener('click', flyemirates.buyPlane.bind(flyemirates));
+
+// const addTax = (rate, value) => {
+//   const addVAT = () => {
+//     return value + value * rate;
+//   };
+//   return addVAT();
+// };
+
+// const totalTax = addTax(0.23, 100);
+// console.log(totalTax);
