@@ -109,3 +109,24 @@ console.log(etihad);
 
 book.call(flyemirates, 635, 'Robin');
 console.log(flyemirates);
+
+//Bind method
+
+const bookFE = book.bind(flyemirates);
+const bookER239 = book.bind(flyemirates, 239);
+bookER239('OLI ULLAH');
+bookER239('MUNIYA NUSRAT');
+bookFE(256, 'Arafat Antu');
+
+flyemirates.planes = 300;
+
+flyemirates.buyPlane = function () {
+  console.log(this);
+
+  this.planes++;
+  console.log(this.planes);
+};
+
+document
+  .querySelector('.buy')
+  .addEventListener('click', flyemirates.buyPlane.bind(flyemirates));
