@@ -185,6 +185,23 @@
 
 // //IFFE
 
-(function () {
-  console.log('This will run only once');
-})();
+// (function () {
+//   console.log('This will run only once');
+// })();
+
+//closures
+
+const secureBooking = function () {
+  let passengerCount = 0;
+
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
+};
+
+const booker = secureBooking();
+
+booker();
+booker();
+booker();
