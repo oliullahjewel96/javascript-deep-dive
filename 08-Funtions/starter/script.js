@@ -247,3 +247,12 @@
 // };
 
 // boardPassengers(180, 4);
+
+//closure coding challenge
+// (function () {
+//   const header = document.querySelector('h1');
+//   header.style.color = 'red';
+//   document.body.addEventListener('click', function () {
+//     header.style.color = 'blue';
+//   });
+// })();
