@@ -78,13 +78,27 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const arr = ["a", "b", "c", "d", "e"];
 
 //SLICE method
-console.log(arr.slice(2));
-console.log(arr.slice(2, 4));
-console.log(arr.slice(-1));
-console.log(arr.slice(-2));
-console.log(arr.slice()); //shallow copy of an array
+// console.log(arr.slice(2));
+// console.log(arr.slice(2, 4));
+// console.log(arr.slice(-1));
+// console.log(arr.slice(-2));
+// console.log(arr.slice()); //shallow copy of an array
 
 //SPLICE method
 
-console.log(arr.splice(2));
-console.log(arr);
+// console.log(arr.splice(2));
+// console.log(arr);
+
+//REVERSE method
+
+// console.log(arr.reverse());
+
+//CONCAT method
+
+// const arr2 = ["g", "h", "i", "j", "k"];
+// const letters = arr.concat(arr2);
+// console.log(arr.concat(arr2));
+
+//JOIN method
+
+// console.log(letters.join("-"));
