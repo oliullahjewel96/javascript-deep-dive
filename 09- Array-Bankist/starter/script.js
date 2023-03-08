@@ -71,6 +71,10 @@ const currencies = new Map([
   ["GBP", "Pound sterling"],
 ]);
 
+currencies.forEach((value, key, map) => {
+  console.log(`${key}: ${value} ${map}`);
+});
+
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // for (const movement of movements) {
