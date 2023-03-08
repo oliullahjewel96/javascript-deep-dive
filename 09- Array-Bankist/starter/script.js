@@ -75,7 +75,7 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
-const arr = ["a", "b", "c", "d", "e"];
+// const arr = ["a", "b", "c", "d", "e"];
 
 //SLICE method
 // console.log(arr.slice(2));
@@ -102,3 +102,10 @@ const arr = ["a", "b", "c", "d", "e"];
 //JOIN method
 
 // console.log(letters.join("-"));
+
+// at method
+
+// const arr = [23, 22, 64];
+// console.log(arr[0]);
+// console.log(arr.at(0));
+// console.log(arr.at(-1));
