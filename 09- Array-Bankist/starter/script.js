@@ -151,23 +151,53 @@ const currencies = new Map([
 
 //coding challenge
 
-const checkDogs = function (dogsJulia, dogsKate) {
-  dogsJulia.slice();
-  console.log(dogsJulia);
-  const juliaCorrected = dogsJulia.slice(1, 3);
-  const newArr = [...juliaCorrected, ...dogsKate];
+// const checkDogs = function (dogsJulia, dogsKate) {
+//   dogsJulia.slice();
+//   console.log(dogsJulia);
+//   const juliaCorrected = dogsJulia.slice(1, 3);
+//   const newArr = [...juliaCorrected, ...dogsKate];
 
-  console.log(newArr);
-  newArr.forEach(function (age, i) {
-    if (age >= 3) {
-      console.log(`Dog number ${i + 1} is a ${age} years old adult`);
-    } else {
-      console.log(`Dog number ${i + 1} is still a puppy`);
-    }
-  });
-};
+//   console.log(newArr);
+//   newArr.forEach(function (age, i) {
+//     if (age >= 3) {
+//       console.log(`Dog number ${i + 1} is a ${age} years old adult`);
+//     } else {
+//       console.log(`Dog number ${i + 1} is still a puppy`);
+//     }
+//   });
+// };
 
-const owner1 = [9, 1, 3, 5, 7];
-const owner2 = [8, 1, 3, 5, 6];
+// const owner1 = [9, 1, 3, 5, 7];
+// const owner2 = [8, 1, 3, 5, 6];
 
-checkDogs(owner1, owner2);
+// checkDogs(owner1, owner2);
+
+//MAP method
+
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// const euroToUsd = 1.1;
+
+// const movementsUSD = movements.map((mov) => mov * euroToUsd);
+
+// console.log(movements);
+// console.log(movementsUSD);
+
+// const moveDescriptions = movements.map(
+//   (
+//     mov,
+//     i,
+//     arr //{
+//   ) =>
+//     // if (mov > 0) {
+//     //   return `Movement ${i + 1}: You deposited ${mov}`;
+//     // } else {
+//     //   return `Movement ${i + 1}: You withdrew ${Math.abs(mov)}`;
+//     // }
+//     `Movement ${i + 1}: You ${mov > 0 ? "deposited" : "withdrew"} ${Math.abs(
+//       mov
+//     )}`
+//   //}
+// );
+
+// console.log(moveDescriptions);
