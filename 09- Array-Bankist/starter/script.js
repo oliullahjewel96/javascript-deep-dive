@@ -62,6 +62,7 @@ const inputCloseUsername = document.querySelector(".form__input--user");
 const inputClosePin = document.querySelector(".form__input--pin");
 
 const displayMovement = function (movements) {
+  containerMovements.innerHTML = "";
   movements.forEach(function (mov, i) {
     const type = mov > 0 ? "deposit" : "withdrawal";
     const html = ` 
@@ -147,3 +148,26 @@ const currencies = new Map([
 // console.log(arr[0]);
 // console.log(arr.at(0));
 // console.log(arr.at(-1));
+
+//coding challenge
+
+const checkDogs = function (dogsJulia, dogsKate) {
+  dogsJulia.slice();
+  console.log(dogsJulia);
+  const juliaCorrected = dogsJulia.slice(1, 3);
+  const newArr = [...juliaCorrected, ...dogsKate];
+
+  console.log(newArr);
+  newArr.forEach(function (age, i) {
+    if (age >= 3) {
+      console.log(`Dog number ${i + 1} is a ${age} years old adult`);
+    } else {
+      console.log(`Dog number ${i + 1} is still a puppy`);
+    }
+  });
+};
+
+const owner1 = [9, 1, 3, 5, 7];
+const owner2 = [8, 1, 3, 5, 6];
+
+checkDogs(owner1, owner2);
