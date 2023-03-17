@@ -213,3 +213,18 @@ const currencies = new Map([
 // );
 
 // console.log(moveDescriptions);
+
+//FILTER method
+
+const deposits = movements.filter(function (mov) {
+  return mov > 0;
+});
+
+console.log(movements);
+console.log(deposits);
+const withdrawals = movements.filter(function (mov) {
+  return mov < 0;
+});
+
+console.log(movements);
+console.log(withdrawals);
