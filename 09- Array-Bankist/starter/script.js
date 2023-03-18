@@ -186,7 +186,7 @@ const currencies = new Map([
 
 //MAP method
 
-// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // const euroToUsd = 1.1;
 
@@ -216,15 +216,24 @@ const currencies = new Map([
 
 //FILTER method
 
-const deposits = movements.filter(function (mov) {
-  return mov > 0;
-});
+// const deposits = movements.filter(function (mov) {
+//   return mov > 0;
+// });
 
-console.log(movements);
-console.log(deposits);
-const withdrawals = movements.filter(function (mov) {
-  return mov < 0;
-});
+// console.log(movements);
+// console.log(deposits);
+// const withdrawals = movements.filter(function (mov) {
+//   return mov < 0;
+// });
 
-console.log(movements);
-console.log(withdrawals);
+// console.log(movements);
+// console.log(withdrawals);
+
+//REDUCE method
+
+const balance = movements.reduce(function (acc, curr, i, arr) {
+  console.log(`Iteration ${i}: ${acc}`);
+  return acc + curr;
+}, 0);
+
+console.log(balance);
