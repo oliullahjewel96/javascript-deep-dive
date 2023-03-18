@@ -79,6 +79,11 @@ const displayMovement = function (movements) {
 
 displayMovement(account1.movements);
 
+const calcDisplayBalance = function (movements) {
+  const balance = movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = balance + "£";
+};
+calcDisplayBalance(account1.movements);
 const createUsername = function (accs) {
   accs.forEach(function (acc) {
     acc.username = acc.owner
@@ -89,7 +94,7 @@ const createUsername = function (accs) {
   });
 };
 createUsername(accounts);
-console.log(accounts);
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -186,7 +191,7 @@ const currencies = new Map([
 
 //MAP method
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // const euroToUsd = 1.1;
 
@@ -231,9 +236,9 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 //REDUCE method
 
-const balance = movements.reduce(function (acc, curr, i, arr) {
-  console.log(`Iteration ${i}: ${acc}`);
-  return acc + curr;
-}, 0);
+// const balance = movements.reduce(function (acc, curr, i, arr) {
+//   console.log(`Iteration ${i}: ${acc}`);
+//   return acc + curr;
+// }, 0);
 
-console.log(balance);
+// console.log(balance);
