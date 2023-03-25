@@ -319,3 +319,28 @@ const currencies = new Map([
 //   .reduce((acc, mov) => acc + mov, 0);
 
 // console.log(totalDepositsUSD);
+
+//coding challenge 3
+
+const calcAverageHumanAge = (ages) => {
+  let humanYears = ages
+    .map((dog) => {
+      if (dog <= 2) {
+        return 2 * dog;
+      } else {
+        return 16 + dog * 4;
+      }
+    })
+    .filter((dog) => {
+      if (dog > 18) {
+        return dog;
+      }
+    })
+    .reduce((acc, dog, i, arr) => acc + dog / arr.length, 0);
+
+  console.log(humanYears);
+  return humanYears;
+};
+
+const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
+const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
