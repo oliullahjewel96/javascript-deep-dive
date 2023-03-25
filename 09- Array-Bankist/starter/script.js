@@ -98,7 +98,6 @@ const calcDisplaySummary = function (movements) {
     .filter((mov) => mov > 0)
     .map((deposit) => (deposit * 1.2) / 100)
     .filter((int, i, arr) => {
-      console.log(arr);
       return int >= 1;
     })
     .reduce((acc, mov) => acc + mov, 0);
@@ -322,25 +321,37 @@ const currencies = new Map([
 
 //coding challenge 3
 
-const calcAverageHumanAge = (ages) => {
-  let humanYears = ages
-    .map((dog) => {
-      if (dog <= 2) {
-        return 2 * dog;
-      } else {
-        return 16 + dog * 4;
-      }
-    })
-    .filter((dog) => {
-      if (dog > 18) {
-        return dog;
-      }
-    })
-    .reduce((acc, dog, i, arr) => acc + dog / arr.length, 0);
+// const calcAverageHumanAge = (ages) => {
+//   let humanYears = ages
+//     .map((dog) => {
+//       if (dog <= 2) {
+//         return 2 * dog;
+//       } else {
+//         return 16 + dog * 4;
+//       }
+//     })
+//     .filter((dog) => {
+//       if (dog > 18) {
+//         return dog;
+//       }
+//     })
+//     .reduce((acc, dog, i, arr) => acc + dog / arr.length, 0);
 
-  console.log(humanYears);
-  return humanYears;
-};
+//   console.log(humanYears);
+//   return humanYears;
+// };
 
-const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
-const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
+// const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
+// const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
+
+//FIND method()
+//find method returns only the first element which satisfy the condition
+
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// const firstWithdrawal = movements.find((mov) => mov < 0);
+
+// console.log(firstWithdrawal);
+
+// const account = accounts.find((acc) => acc.owner === "Jessica Davis");
+// console.log(account);
