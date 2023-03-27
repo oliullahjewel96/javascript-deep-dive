@@ -161,6 +161,25 @@ btnTransfer.addEventListener("click", function (e) {
   }
 });
 
+btnLoan.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const amount = Number(inputLoanAmount.value);
+
+  if (
+    amount > 0 &&
+    currentAccount.movements.some((mov) => mov >= amount * 0.1)
+  ) {
+    //Add movement
+    currentAccount.movements.push(amount);
+
+    //Update UI
+
+    updateUI(currentAccount);
+  }
+  inputLoanAmount.value = "";
+});
+
 btnClose.addEventListener("click", function (e) {
   e.preventDefault();
   if (
@@ -175,10 +194,9 @@ btnClose.addEventListener("click", function (e) {
     accounts.splice(index, 1);
     //HIDE UI
     containerApp.style.opacity = 0;
-
-    //Clear the fields
-    inputCloseUsername.value = inputClosePin.value = "";
   }
+  //Clear the fields
+  inputCloseUsername.value = inputClosePin.value = "";
 });
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -417,3 +435,15 @@ const currencies = new Map([
 
 // const account = accounts.find((acc) => acc.owner === "Jessica Davis");
 // console.log(account);
+
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// //EQUALITY
+
+// console.log(movements.includes(-130));
+
+// //CONDITION
+
+// const anyDeposits = movements.some((mov) => mov > 5000);
+
+// console.log(anyDeposits);
