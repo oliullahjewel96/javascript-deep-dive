@@ -481,3 +481,29 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 //   .reduce((acc, mov) => acc + mov, 0);
 
 // console.log(overallBalance2);
+
+//SORT method
+
+//string
+const owners = ["oli", "robin", "antu", "saif"];
+console.log(owners.sort());
+console.log(owners);
+
+//Numbers
+
+//if we return <0, then A will be before B
+//if we return >0, then B will be before A
+
+//Ascending
+// movements.sort((a, b) => {
+//   if (a > b) return 1;
+//   if (b > a) return -1;
+// });
+
+// //descending
+// movements.sort((a, b) => {
+//   if (a > b) return -1;
+//   if (b > a) return 1;
+// });
+
+// console.log(movements); //mutated
