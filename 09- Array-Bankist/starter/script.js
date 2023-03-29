@@ -518,10 +518,16 @@ const currencies = new Map([
 
 // console.log(movements); //mutated
 
-const bankDeposits = accounts
-  .flatMap((acc) => acc.movements)
-  // .flat()
-  .filter((mov) => mov > 0)
-  .reduce((acc, mov) => acc + mov, 0);
+// const bankDeposits = accounts
+//   .flatMap((acc) => acc.movements)
+//   // .flat()
+//   .filter((mov) => mov > 0)
+//   .reduce((acc, mov) => acc + mov, 0);
 
-console.log(bankDeposits);
+// console.log(bankDeposits);
+
+const numDeposits1000 = accounts
+  .flatMap((acc) => acc.movements)
+  .reduce((count, cur) => (cur >= 1000 ? count + 1 : count), 0);
+
+console.log(numDeposits1000);
