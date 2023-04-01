@@ -4,6 +4,49 @@
 /////////////////////////////////////////////////
 // BANKIST APP
 
+const accountOne = {
+  owner: "Jonas Schmedtmann",
+  movements: [200, 455.23, -306.5, 25000, -642.21, -133.9, 79.97, 1300],
+  interestRate: 1.2, // %
+  pin: 1111,
+
+  movementsDates: [
+    "2019-11-18T21:31:17.178Z",
+    "2019-12-23T07:42:02.383Z",
+    "2020-01-28T09:15:04.904Z",
+    "2020-04-01T10:17:24.185Z",
+    "2020-05-08T14:11:59.604Z",
+    "2020-05-27T17:01:17.194Z",
+    "2020-07-11T23:36:17.929Z",
+    "2020-07-12T10:51:36.790Z",
+  ],
+  currency: "EUR",
+  locale: "pt-PT", // de-DE
+};
+
+const accountTwo = {
+  owner: "Jessica Davis",
+  movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
+  interestRate: 1.5,
+  pin: 2222,
+
+  movementsDates: [
+    "2019-11-01T13:15:33.035Z",
+    "2019-11-30T09:48:16.867Z",
+    "2019-12-25T06:04:23.907Z",
+    "2020-01-25T14:18:46.235Z",
+    "2020-02-05T16:33:06.386Z",
+    "2020-04-10T14:43:26.374Z",
+    "2020-06-25T18:49:59.371Z",
+    "2020-07-26T12:01:20.894Z",
+  ],
+  currency: "USD",
+  locale: "en-US",
+};
+
+console.log(23 === 23.0);
+console.log(+"23"); //type coercion
+
 // Data
 const account1 = {
   owner: "Jonas Schmedtmann",
@@ -130,7 +173,7 @@ btnLogin.addEventListener("click", function (e) {
     (acc) => acc.username === inputLoginUsername.value
   );
 
-  if (currentAccount?.pin === Number(inputLoginPin.value)) {
+  if (currentAccount?.pin === +inputLoginPin.value) {
     //Display UI and welcome message
     labelWelcome.textContent = `Welcome back, ${
       currentAccount.owner.split(" ")[0]
@@ -145,7 +188,7 @@ btnLogin.addEventListener("click", function (e) {
 });
 btnTransfer.addEventListener("click", function (e) {
   e.preventDefault();
-  const amount = Number(inputTransferAmount.value);
+  const amount = +inputTransferAmount.value;
   const receiverAcc = accounts.find(
     (acc) => acc.username === inputTransferTo.value
   );
@@ -166,7 +209,7 @@ btnTransfer.addEventListener("click", function (e) {
 btnLoan.addEventListener("click", function (e) {
   e.preventDefault();
 
-  const amount = Number(inputLoanAmount.value);
+  const amount = +inputLoanAmount.value;
 
   if (
     amount > 0 &&
@@ -186,7 +229,7 @@ btnClose.addEventListener("click", function (e) {
   e.preventDefault();
   if (
     currentAccount.username === inputCloseUsername.value &&
-    currentAccount.pin === Number(inputClosePin.value)
+    currentAccount.pin === +inputClosePin.value
   ) {
     const index = accounts.findIndex(
       (acc) => acc.username === currentAccount.username
@@ -577,78 +620,78 @@ TEST DATA:
 
 */
 
-const dogs = [
-  { weight: 22, curFood: 250, owners: ["Alice", "Bob"] },
-  { weight: 8, curFood: 200, owners: ["Matilda"] },
-  { weight: 13, curFood: 275, owners: ["Sarah", "John"] },
-  { weight: 32, curFood: 340, owners: ["Michael"] },
-];
+// const dogs = [
+//   { weight: 22, curFood: 250, owners: ["Alice", "Bob"] },
+//   { weight: 8, curFood: 200, owners: ["Matilda"] },
+//   { weight: 13, curFood: 275, owners: ["Sarah", "John"] },
+//   { weight: 32, curFood: 340, owners: ["Michael"] },
+// ];
 
 //Question 1
 //  Loop over the array containing dog objects, and for each dog, calculate
 //  the recommended food portion and add it to the object as a new property.
 //  Do NOT create a new array, simply loop over the array.
 //  Forumla: recommendedFood = weight ** 0.75 * 28. (The result is in grams of food, and the weight needs to be in kg)
-const foodPortion = dogs.forEach((dog) => {
-  let recommendedFood = dog.weight ** 0.75 * 28;
-  dog.recommendedFood = recommendedFood;
-});
+// const foodPortion = dogs.forEach((dog) => {
+//   let recommendedFood = dog.weight ** 0.75 * 28;
+//   dog.recommendedFood = recommendedFood;
+// });
 
-console.log(dogs);
+// console.log(dogs);
 
 //question 2
 //  Find Sarah's dog and log to the console whether it's eating
 //  too much or too little. HINT: Some dogs have multiple owners,
 //  so you first need to find Sarah in the owners array, and so this one is a bit tricky (on purpose) 🤓
-const dogSarah = dogs.find((dog) => dog.owners.includes("Sarah"));
+// const dogSarah = dogs.find((dog) => dog.owners.includes("Sarah"));
 
-console.log(dogSarah);
+// console.log(dogSarah);
 
 //Question 3
 // Create an array containing all owners of dogs who eat too much ('ownersEatTooMuch')
 // and an array with all owners of dogs who eat too little ('ownersEatTooLittle').
 
-const ownersEatTooMuch = dogs
-  .filter((dog) => dog.curFood > dog.recommendedFood)
-  .map((dog) => dog.owners)
-  .flat();
+// const ownersEatTooMuch = dogs
+//   .filter((dog) => dog.curFood > dog.recommendedFood)
+//   .map((dog) => dog.owners)
+//   .flat();
 
-console.log(ownersEatTooMuch);
+// console.log(ownersEatTooMuch);
 
-const ownersEatTooLittle = dogs
-  .filter((dog) => dog.curFood < dog.recommendedFood)
-  .map((dog) => dog.owners)
-  .flat();
+// const ownersEatTooLittle = dogs
+//   .filter((dog) => dog.curFood < dog.recommendedFood)
+//   .map((dog) => dog.owners)
+//   .flat();
 
-console.log(ownersEatTooLittle);
+// console.log(ownersEatTooLittle);
 
 //Question 4
 
 // Log a string to the console for each array created in 3., like this:
 // "Matilda and Alice and Bob's dogs eat too much!" and "Sarah and John and Michael's dogs eat too little!"
 
-console.log(`${ownersEatTooMuch.join(" and ")}s dogs eat too much`);
-console.log(`${ownersEatTooLittle.join(" and ")}s dogs eat too little`);
+// console.log(`${ownersEatTooMuch.join(" and ")}s dogs eat too much`);
+// console.log(`${ownersEatTooLittle.join(" and ")}s dogs eat too little`);
 
 //Question 5
 
 // Log to the console whether there is any dog eating EXACTLY
 // the amount of food that is recommended (just true or false)
 
-console.log(dogs.some((dog) => dog.curFood > dog.recommendedFood));
+// console.log(dogs.some((dog) => dog.curFood > dog.recommendedFood));
 
 //question 6
 
 //Log to the console whether there is any dog eating
 //an OKAY amount of food (just true or false)
 
-console.log(
-  dogs.some(
-    (dog) =>
-      dog.curFood > dog.recommendedFood * 0.9 &&
-      dog.curFood < dog.recommendedFood * 1.1
-  )
-);
+// console.log(
+//   dogs.some(
+//     (dog) =>
+//       dog.curFood > dog.recommendedFood * 0.9 &&
+//       dog.curFood < dog.recommendedFood * 1.1
+//   )
+// );
 
 //question 7
 
@@ -656,11 +699,11 @@ console.log(
 //eating an OKAY amount of food (try to reuse the
 //condition used in 6.)
 
-const okayEatingDogs = (dog) =>
-  dog.curFood > dog.recommendedFood * 0.9 &&
-  dog.curFood < dog.recommendedFood * 1.1;
+// const okayEatingDogs = (dog) =>
+//   dog.curFood > dog.recommendedFood * 0.9 &&
+//   dog.curFood < dog.recommendedFood * 1.1;
 
-console.log(dogs.filter(okayEatingDogs));
+// console.log(dogs.filter(okayEatingDogs));
 
 //question 8
 
@@ -668,8 +711,8 @@ console.log(dogs.filter(okayEatingDogs));
 //food portion in an ascending order (keep in mind that the portions
 //are inside the array's objects)
 
-const dogsSorted = dogs
-  .slice()
-  .sort((a, b) => a.recommendedFood - b.recommendedFood);
+// const dogsSorted = dogs
+//   .slice()
+//   .sort((a, b) => a.recommendedFood - b.recommendedFood);
 
-console.log(dogsSorted);
+// console.log(dogsSorted);
