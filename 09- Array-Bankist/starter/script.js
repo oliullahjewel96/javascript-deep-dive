@@ -60,29 +60,37 @@ const accountTwo = {
 // console.log(Number.isFinite(20));
 // console.log(Number.isFinite("20"));
 
-console.log(Math.sqrt(25));
-console.log(Math.max(5, 18, 3, 323, 35, 556, 6));
-console.log(Math.min(5, 18, 3, 323, 35, 556, 6));
+// console.log(Math.sqrt(25));
+// console.log(Math.max(5, 18, 3, 323, 35, 556, 6));
+// console.log(Math.min(5, 18, 3, 323, 35, 556, 6));
 
-console.log(Math.PI * Number.parseFloat("10px") ** 2);
-console.log(Math.floor(Math.random() * 6) + 1);
+// console.log(Math.PI * Number.parseFloat("10px") ** 2);
+// console.log(Math.floor(Math.random() * 6) + 1);
 
-//Rounding integers
-console.log(Math.trunc(23.3));
+// //Rounding integers
+// console.log(Math.trunc(23.3));
 
-console.log(Math.round(23.3));
-console.log(Math.round(23.9));
+// console.log(Math.round(23.3));
+// console.log(Math.round(23.9));
 
-console.log(Math.ceil(23.3));
-console.log(Math.ceil(23.9));
+// console.log(Math.ceil(23.3));
+// console.log(Math.ceil(23.9));
 
-console.log(Math.floor(23.3));
-console.log(Math.floor(23.9));
+// console.log(Math.floor(23.3));
+// console.log(Math.floor(23.9));
 
-//Rounding decimals
-console.log((2.7).toFixed(0));
-console.log((2.7).toFixed(3));
-console.log((2.2345).toFixed(2));
+// //Rounding decimals
+// console.log((2.7).toFixed(0));
+// console.log((2.7).toFixed(3));
+// console.log((2.2345).toFixed(2));
+
+//EVEN and ODD
+
+const isEven = (n) => n % 2 === 0;
+console.log(isEven(8));
+console.log(isEven(23));
+console.log(isEven(4));
+
 //
 //
 //
@@ -767,3 +775,14 @@ TEST DATA:
 //   .sort((a, b) => a.recommendedFood - b.recommendedFood);
 
 // console.log(dogsSorted);
+
+// labelBalance.addEventListener("click", function () {
+//   [...document.querySelectorAll(".movements__row")].forEach((row, i) => {
+//     if (i % 2 === 0) {
+//       row.style.backgroundColor = "grey";
+//     }
+//     if (i % 2 !== 0) {
+//       row.style.backgroundColor = "red";
+//     }
+//   });
+// });
