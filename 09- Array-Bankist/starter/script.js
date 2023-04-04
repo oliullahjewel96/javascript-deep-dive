@@ -86,10 +86,10 @@ const accountTwo = {
 
 //EVEN and ODD
 
-const isEven = (n) => n % 2 === 0;
-console.log(isEven(8));
-console.log(isEven(23));
-console.log(isEven(4));
+//BIG int
+
+console.log(328683765238759272333979275982375987n);
+console.log(10000000000000000000000n + 10000000000000000000000000n);
 
 //
 //
