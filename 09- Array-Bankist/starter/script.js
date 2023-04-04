@@ -88,8 +88,32 @@ const accountTwo = {
 
 //BIG int
 
-console.log(328683765238759272333979275982375987n);
-console.log(10000000000000000000000n + 10000000000000000000000000n);
+// console.log(328683765238759272333979275982375987n);
+// console.log(10000000000000000000000n + 10000000000000000000000000n);
+
+//DATES
+
+//4 ways of creating dates in js
+
+/*const now = new Date();
+console.log(now);
+
+console.log(new Date("Tue Apr 04 2023 14:51:41"));
+console.log(new Date(2023, 3, 4, 14, 55, 14));
+*/
+
+const future = new Date(2024, 3, 4, 14, 55, 14);
+
+console.log(future.getFullYear());
+console.log(future.getMonth());
+console.log(future.getDate());
+console.log(future.getDay());
+console.log(future.getHours());
+console.log(future.getMinutes());
+console.log(future.getSeconds());
+console.log(future.toISOString());
+console.log(future.getTime());
+console.log(Date.now()); //gives timestamp
 
 //
 //
