@@ -102,18 +102,18 @@ console.log(new Date("Tue Apr 04 2023 14:51:41"));
 console.log(new Date(2023, 3, 4, 14, 55, 14));
 */
 
-const future = new Date(2024, 3, 4, 14, 55, 14);
+// const future = new Date(2024, 3, 4, 14, 55, 14);
 
-console.log(future.getFullYear());
-console.log(future.getMonth());
-console.log(future.getDate());
-console.log(future.getDay());
-console.log(future.getHours());
-console.log(future.getMinutes());
-console.log(future.getSeconds());
-console.log(future.toISOString());
-console.log(future.getTime());
-console.log(Date.now()); //gives timestamp
+// console.log(future.getFullYear());
+// console.log(future.getMonth());
+// console.log(future.getDate());
+// console.log(future.getDay());
+// console.log(future.getHours());
+// console.log(future.getMinutes());
+// console.log(future.getSeconds());
+// console.log(future.toISOString());
+// console.log(future.getTime());
+// console.log(Date.now()); //gives timestamp
 
 //
 //
@@ -250,6 +250,12 @@ const updateUI = function (acc) {
 };
 //Event handler
 let currentAccount;
+
+//Fake always logged in
+currentAccount = account1;
+updateUI(currentAccount);
+containerApp.style.opacity = 100;
+
 btnLogin.addEventListener("click", function (e) {
   e.preventDefault();
   currentAccount = accounts.find(
