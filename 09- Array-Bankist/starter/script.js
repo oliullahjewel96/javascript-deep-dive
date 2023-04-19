@@ -140,6 +140,15 @@ console.log(new Date(2023, 3, 4, 14, 55, 14));
 // );
 // console.log("Syria:     ", new Intl.NumberFormat("ar-SY", options).format(num));
 
+//setInterval
+
+// setInterval(() => {
+//   const now = new Date();
+//   const hours = now.getHours();
+//   const minutes = now.getMinutes();
+//   const seconds = now.getSeconds();
+//   console.log(`${hours}:${minutes}:${seconds}`);
+// }, 1000);
 //
 //
 //
