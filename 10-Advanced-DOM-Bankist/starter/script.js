@@ -73,3 +73,35 @@ document
   .addEventListener('click', function () {
     message.remove();
   });
+
+//Styles
+
+message.style.backgroundColor = '#37383d';
+message.style.width = '120%';
+
+console.log(getComputedStyle(message).color);
+
+message.style.height =
+  Number.parseFloat(getComputedStyle(message).height, 10) + 30 + 'px';
+
+document.documentElement.style.setProperty('--color-primary', 'blue');
+
+//Attributes
+
+const logo = document.querySelector('.nav__logo');
+console.log(logo.alt);
+console.log(logo.src);
+console.log(logo.getAttribute('src'));
+console.log(logo.className);
+
+logo.alt = 'Beautiful Minimalist Logo';
+
+//classes
+
+logo.classList.add('a', 'j');
+logo.classList.remove();
+logo.classList.toggle();
+logo.classList.contains();
+
+//Don't use
+logo.className = 'oli'; //overright all the classes.
