@@ -42,7 +42,7 @@ document.addEventListener('keydown', function (e) {
 // console.log(document.head);
 // console.log(document.body);
 
-const header = document.querySelector('.header');
+//const header = document.querySelector('.header');
 
 // const allSections = document.querySelectorAll('.section');
 // console.log(allSections);
@@ -53,7 +53,7 @@ const header = document.querySelector('.header');
 //creating and inserting elements
 //.insertAdjacentHTML
 
-const message = document.createElement('div');
+/*const message = document.createElement('div');
 message.classList.add('cookie-message');
 message.textContent = 'We use cookies for improved functionality and anlytics';
 message.innerHTML =
@@ -105,3 +105,33 @@ logo.classList.contains();
 
 //Don't use
 logo.className = 'oli'; //overright all the classes.
+*/
+
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+
+const section = document.querySelector('#section--1');
+
+btnScrollTo.addEventListener('click', function (e) {
+  const s1coords = section.getBoundingClientRect();
+  console.log(s1coords);
+  console.log(e.target.getBoundingClientRect());
+  console.log('Current Scroll (X/Y)', window.pageXOffset, window.pageYOffset);
+  console.log(
+    'height/width viewport',
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth
+  );
+
+  // window.scrollTo(
+  //   s1coords.left + window.pageXOffset,
+  //   s1coords.top + window.pageYOffset
+  // );
+
+  // window.scrollTo({
+  //   left: s1coords.left + window.pageXOffset,
+  //   top: s1coords.top + window.pageYOffset,
+  //   behavior: 'smooth',
+  // });
+
+  section.scrollIntoView({ behavior: 'smooth' });
+});
