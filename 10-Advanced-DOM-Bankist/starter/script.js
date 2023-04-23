@@ -30,6 +30,35 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+
+const section = document.querySelector('#section--1');
+
+btnScrollTo.addEventListener('click', function (e) {
+  const s1coords = section.getBoundingClientRect();
+  console.log(s1coords);
+  console.log(e.target.getBoundingClientRect());
+  console.log('Current Scroll (X/Y)', window.pageXOffset, window.pageYOffset);
+  console.log(
+    'height/width viewport',
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth
+  );
+
+  // window.scrollTo(
+  //   s1coords.left + window.pageXOffset,
+  //   s1coords.top + window.pageYOffset
+  // );
+
+  // window.scrollTo({
+  //   left: s1coords.left + window.pageXOffset,
+  //   top: s1coords.top + window.pageYOffset,
+  //   behavior: 'smooth',
+  // });
+
+  section.scrollIntoView({ behavior: 'smooth' });
+});
+
 ///////
 ///////
 //////
@@ -107,31 +136,26 @@ logo.classList.contains();
 logo.className = 'oli'; //overright all the classes.
 */
 
-const btnScrollTo = document.querySelector('.btn--scroll-to');
+//Event bubbling
 
-const section = document.querySelector('#section--1');
+const randomInt = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1) + min);
 
-btnScrollTo.addEventListener('click', function (e) {
-  const s1coords = section.getBoundingClientRect();
-  console.log(s1coords);
-  console.log(e.target.getBoundingClientRect());
-  console.log('Current Scroll (X/Y)', window.pageXOffset, window.pageYOffset);
-  console.log(
-    'height/width viewport',
-    document.documentElement.clientHeight,
-    document.documentElement.clientWidth
-  );
+const randomColor = () =>
+  `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
 
-  // window.scrollTo(
-  //   s1coords.left + window.pageXOffset,
-  //   s1coords.top + window.pageYOffset
-  // );
+console.log(randomColor(0, 255));
 
-  // window.scrollTo({
-  //   left: s1coords.left + window.pageXOffset,
-  //   top: s1coords.top + window.pageYOffset,
-  //   behavior: 'smooth',
-  // });
+document.querySelector('.nav__link').addEventListener('click', function (e) {
+  this.style.backgroundColor = randomColor();
+  console.log('LINK', e.target);
+});
 
-  section.scrollIntoView({ behavior: 'smooth' });
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  this.style.backgroundColor = randomColor();
+  console.log('CONTAINER', e.target);
+});
+
+document.querySelector('.nav').addEventListener('click', function (e) {
+  console.log('NAV', e.target);
 });
