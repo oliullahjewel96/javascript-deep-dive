@@ -59,6 +59,17 @@ btnScrollTo.addEventListener('click', function (e) {
   section.scrollIntoView({ behavior: 'smooth' });
 });
 
+//page nvaigation
+
+document.querySelectorAll('.nav__link').forEach(el => {
+  el.addEventListener('click', e => {
+    e.preventDefault();
+    const id = el.getAttribute('href');
+    console.log(id);
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
 ///////
 ///////
 //////
@@ -138,26 +149,26 @@ logo.className = 'oli'; //overright all the classes.
 
 //Event bubbling
 
-const randomInt = (min, max) =>
-  Math.floor(Math.random() * (max - min + 1) + min);
+// const randomInt = (min, max) =>
+//   Math.floor(Math.random() * (max - min + 1) + min);
 
-const randomColor = () =>
-  `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
+// const randomColor = () =>
+//   `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
 
-console.log(randomColor(0, 255));
+// console.log(randomColor(0, 255));
 
-document.querySelector('.nav__link').addEventListener('click', function (e) {
-  this.style.backgroundColor = randomColor();
-  console.log('LINK', e.target);
-  //stop propagation
-  //e.stopPropagation();
-});
+// document.querySelector('.nav__link').addEventListener('click', function (e) {
+//   this.style.backgroundColor = randomColor();
+//   console.log('LINK', e.target);
+//   //stop propagation
+//   //e.stopPropagation();
+// });
 
-document.querySelector('.nav__links').addEventListener('click', function (e) {
-  this.style.backgroundColor = randomColor();
-  console.log('CONTAINER', e.target);
-});
+// document.querySelector('.nav__links').addEventListener('click', function (e) {
+//   this.style.backgroundColor = randomColor();
+//   console.log('CONTAINER', e.target);
+// });
 
-document.querySelector('.nav').addEventListener('click', function (e) {
-  console.log('NAV', e.target);
-});
+// document.querySelector('.nav').addEventListener('click', function (e) {
+//   console.log('NAV', e.target);
+// });
