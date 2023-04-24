@@ -59,15 +59,29 @@ btnScrollTo.addEventListener('click', function (e) {
   section.scrollIntoView({ behavior: 'smooth' });
 });
 
-//page nvaigation
+//page navigation
 
-document.querySelectorAll('.nav__link').forEach(el => {
-  el.addEventListener('click', e => {
-    e.preventDefault();
-    const id = el.getAttribute('href');
+// document.querySelectorAll('.nav__link').forEach(el => {
+//   el.addEventListener('click', e => {
+//     e.preventDefault();
+//     const id = el.getAttribute('href');
+//     console.log(id);
+//     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+//   });
+// });
+
+//1. Add event listener to common parent element
+//2. Determine what element originated the event
+
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
+
+  //Matching startegy
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
     console.log(id);
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-  });
+  }
 });
 
 ///////
