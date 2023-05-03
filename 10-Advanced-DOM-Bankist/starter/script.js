@@ -127,13 +127,31 @@ nav.addEventListener('mouseout', handleHover.bind(1));
 
 //Sticky navigation
 
-const initialCoords = section.getBoundingClientRect();
+// const initialCoords = section.getBoundingClientRect();
 
-console.log(initialCoords);
-window.addEventListener('scroll', function () {
-  if (this.window.scrollY > initialCoords.top) nav.classList.add('sticky');
+// console.log(initialCoords);
+// window.addEventListener('scroll', function () {
+//   if (this.window.scrollY > initialCoords.top) nav.classList.add('sticky');
+//   else nav.classList.remove('sticky');
+// });
+
+//Intersction observer API
+
+const header = document.querySelector('.header');
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  console.log(entry);
+  if (!entry.isIntersecting) nav.classList.add('sticky');
   else nav.classList.remove('sticky');
+};
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: '-90px',
 });
+
+headerObserver.observe(header);
 ///////
 ///////
 //////
