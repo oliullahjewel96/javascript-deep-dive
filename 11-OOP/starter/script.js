@@ -18,3 +18,17 @@ console.log(oli);
 const fanzhendong = new Person('Fan', 1998);
 console.log(fanzhendong);
 console.log(oli instanceof Person);
+
+//prototypes
+
+console.log(Person.prototype);
+Person.prototype.calcAge = function () {
+  console.log(2023 - this.birthYear);
+};
+
+oli.calcAge();
+
+console.log(oli.__proto__);
+console.log(oli.__proto__ === Person.prototype);
+console.log(Person.prototype.isPrototypeOf(oli));
+console.log(oli.hasOwnProperty('firstName'));
