@@ -37,27 +37,48 @@
 
 //coding challenge
 
-const Car = function (make, speed) {
-  this.make = make;
-  this.speed = speed;
-};
+// const Car = function (make, speed) {
+//   this.make = make;
+//   this.speed = speed;
+// };
 
-Car.prototype.accelerate = function () {
-  this.speed = this.speed + 10;
-  console.log(`${this.make} going at ${this.speed} km/h`);
-};
+// Car.prototype.accelerate = function () {
+//   this.speed = this.speed + 10;
+//   console.log(`${this.make} going at ${this.speed} km/h`);
+// };
 
-Car.prototype.brake = function () {
-  this.speed = this.speed - 5;
-  console.log(`${this.make} going at ${this.speed} km/h`);
-};
+// Car.prototype.brake = function () {
+//   this.speed = this.speed - 5;
+//   console.log(`${this.make} going at ${this.speed} km/h`);
+// };
 
-const car1 = new Car('BMW', 110);
-const car2 = new Car('Marcedes', 100);
+// const car1 = new Car('BMW', 110);
+// const car2 = new Car('Marcedes', 100);
 
-car1.accelerate();
-car1.accelerate();
-car1.accelerate();
-car2.brake();
-car2.brake();
-car2.brake();
+// car1.accelerate();
+// car1.accelerate();
+// car1.accelerate();
+// car2.brake();
+// car2.brake();
+// car2.brake();
+
+//ES6 Classes
+// const PersonCl = class{
+
+// }
+
+//class declaration
+// class PersonCl {
+//   constructor(firstName, birthYear) {
+//     this.firstName = firstName;
+//     this.birthYear = birthYear;
+//   }
+//   calcAge() {
+//     console.log(2023 - this.birthYear);
+//   }
+// }
+
+// const oli = new PersonCl('Oli', 1996);
+
+// console.log(oli);
+// oli.calcAge();
