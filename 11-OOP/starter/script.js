@@ -82,3 +82,24 @@
 
 // console.log(oli);
 // oli.calcAge();
+
+//static methods
+
+class PersonCl {
+  constructor(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  }
+  //instance methods
+  calcAge() {
+    console.log(2023 - this.birthYear);
+  }
+
+  //static method
+  static hey() {
+    console.log('Hey There ');
+    console.log(this);
+  }
+}
+
+PersonCl.hey();
