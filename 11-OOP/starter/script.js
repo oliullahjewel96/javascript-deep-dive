@@ -85,21 +85,30 @@
 
 //static methods
 
-class PersonCl {
-  constructor(firstName, birthYear) {
-    this.firstName = firstName;
-    this.birthYear = birthYear;
-  }
-  //instance methods
-  calcAge() {
-    console.log(2023 - this.birthYear);
-  }
+// class PersonCl {
+//   constructor(firstName, birthYear) {
+//     this.firstName = firstName;
+//     this.birthYear = birthYear;
+//   }
+//   //instance methods
+//   calcAge() {
+//     console.log(2023 - this.birthYear);
+//   }
 
-  //static method
-  static hey() {
-    console.log('Hey There ');
-    console.log(this);
-  }
-}
+//   //static method
+//   static hey() {
+//     console.log('Hey There ');
+//     console.log(this);
+//   }
+// }
 
-PersonCl.hey();
+// PersonCl.hey();
+
+// const PersonProto = {
+//   calcAge() {
+//     console.log(2023 - this.birthYear);
+//   },
+// };
+
+// const steven = Object.create(PersonProto);
+// console.log(steven);
