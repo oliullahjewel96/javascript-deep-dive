@@ -130,32 +130,75 @@
 //   console.log(`${this.make} going at ${this.speed} km/h`);
 // };
 
-class Car {
-  constructor(make, speed) {
-    this.make = make;
-    this.speed = speed;
+// class Car {
+//   constructor(make, speed) {
+//     this.make = make;
+//     this.speed = speed;
+//   }
+//   accelerate() {
+//     this.speed = this.speed + 10;
+//     console.log(`${this.make} going at ${this.speed} km/h`);
+//   }
+//   brake() {
+//     this.speed = this.speed - 5;
+//     console.log(`${this.make} going at ${this.speed} km/h`);
+//   }
+
+//   get speedUS() {
+//     return this.speed / 1.6;
+//   }
+//   set speedUS(speed) {
+//     this.speed = speed * 1.6;
+//   }
+// }
+
+// const ford = new Car('ford', 120);
+
+// ford.accelerate();
+// ford.brake();
+// console.log(ford.speedUS);
+// ford.speedUS = 50;
+// console.log(ford);
+
+//inheritance in ES6 classes
+
+class PersonCl {
+  constructor(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
   }
-  accelerate() {
-    this.speed = this.speed + 10;
-    console.log(`${this.make} going at ${this.speed} km/h`);
-  }
-  brake() {
-    this.speed = this.speed - 5;
-    console.log(`${this.make} going at ${this.speed} km/h`);
+  //instance methods
+  calcAge() {
+    console.log(2023 - this.birthYear);
   }
 
-  get speedUS() {
-    return this.speed / 1.6;
-  }
-  set speedUS(speed) {
-    this.speed = speed * 1.6;
+  //static method
+  static hey() {
+    console.log('Hey There ');
+    console.log(this);
   }
 }
 
-const ford = new Car('ford', 120);
+class Student extends PersonCl {
+  constructor(firstName, birthYear, course) {
+    //Always needs to happen first!
+    super(firstName, birthYear);
+    this.course = course;
+  }
+  introduce() {
+    console.log(`My name is ${this.firstName} and I study ${this.course}`);
+  }
+  calcAge() {
+    console.log(
+      `I'm ${
+        2037 - this.birthYear
+      } years old, butas a student I feel more like${
+        2037 - this.birthYear - 10
+      }`
+    );
+  }
+}
 
-ford.accelerate();
-ford.brake();
-console.log(ford.speedUS);
-ford.speedUS = 50;
-console.log(ford);
+const oli = new Student('Oli', 1996, 'Computer science');
+oli.introduce();
+oli.calcAge();
