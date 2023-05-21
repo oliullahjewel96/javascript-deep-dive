@@ -162,43 +162,84 @@
 
 //inheritance in ES6 classes
 
-class PersonCl {
-  constructor(firstName, birthYear) {
-    this.firstName = firstName;
-    this.birthYear = birthYear;
-  }
-  //instance methods
-  calcAge() {
-    console.log(2023 - this.birthYear);
+// class PersonCl {
+//   constructor(firstName, birthYear) {
+//     this.firstName = firstName;
+//     this.birthYear = birthYear;
+//   }
+//   //instance methods
+//   calcAge() {
+//     console.log(2023 - this.birthYear);
+//   }
+
+//   //static method
+//   static hey() {
+//     console.log('Hey There ');
+//     console.log(this);
+//   }
+// }
+
+// class Student extends PersonCl {
+//   constructor(firstName, birthYear, course) {
+//     //Always needs to happen first!
+//     super(firstName, birthYear);
+//     this.course = course;
+//   }
+//   introduce() {
+//     console.log(`My name is ${this.firstName} and I study ${this.course}`);
+//   }
+//   calcAge() {
+//     console.log(
+//       `I'm ${
+//         2037 - this.birthYear
+//       } years old, butas a student I feel more like${
+//         2037 - this.birthYear - 10
+//       }`
+//     );
+//   }
+// }
+
+// const oli = new Student('Oli', 1996, 'Computer science');
+// oli.introduce();
+// oli.calcAge();
+
+class Account {
+  constructor(owner, currency, pin) {
+    this.owner = owner;
+    this.currency = currency;
+    this.pin = pin;
+    //protected property
+    this._movements = [];
+    this.locale = navigator.language;
+
+    console.log(`Thanks for opening an account, ${this.owner}`);
   }
 
-  //static method
-  static hey() {
-    console.log('Hey There ');
-    console.log(this);
+  //Public interface
+  getMovements() {
+    return this._movements;
+  }
+  deposit(val) {
+    this._movements.push(val);
+  }
+  withdraw(val) {
+    this.deposit(-val);
+  }
+
+  _approveLoan(val) {
+    return true;
+  }
+
+  requestLoan(val) {
+    if (this._approveLoan(val)) {
+      this.deposit(val);
+      console.log(`Loan Approved`);
+    }
   }
 }
 
-class Student extends PersonCl {
-  constructor(firstName, birthYear, course) {
-    //Always needs to happen first!
-    super(firstName, birthYear);
-    this.course = course;
-  }
-  introduce() {
-    console.log(`My name is ${this.firstName} and I study ${this.course}`);
-  }
-  calcAge() {
-    console.log(
-      `I'm ${
-        2037 - this.birthYear
-      } years old, butas a student I feel more like${
-        2037 - this.birthYear - 10
-      }`
-    );
-  }
-}
-
-const oli = new Student('Oli', 1996, 'Computer science');
-oli.introduce();
-oli.calcAge();
+const acc1 = new Account('oli', 'TAKA', 1111);
+acc1.deposit(250);
+acc1.withdraw(140);
+acc1.requestLoan(1000);
+console.log(acc1);
