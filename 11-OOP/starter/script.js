@@ -203,43 +203,52 @@
 // oli.introduce();
 // oli.calcAge();
 
-class Account {
-  constructor(owner, currency, pin) {
-    this.owner = owner;
-    this.currency = currency;
-    this.pin = pin;
-    //protected property
-    this._movements = [];
-    this.locale = navigator.language;
+// class Account {
+//   constructor(owner, currency, pin) {
+//     this.owner = owner;
+//     this.currency = currency;
+//     this.pin = pin;
+//     //protected property
+//     this._movements = [];
+//     this.locale = navigator.language;
 
-    console.log(`Thanks for opening an account, ${this.owner}`);
-  }
+//     console.log(`Thanks for opening an account, ${this.owner}`);
+//   }
 
-  //Public interface
-  getMovements() {
-    return this._movements;
-  }
-  deposit(val) {
-    this._movements.push(val);
-  }
-  withdraw(val) {
-    this.deposit(-val);
-  }
+//   //Public interface
+//   getMovements() {
+//     return this._movements;
+//   }
+//   deposit(val) {
+//     this._movements.push(val);
+//     return this;
+//   }
+//   withdraw(val) {
+//     this.deposit(-val);
+//     return this;
+//   }
 
-  _approveLoan(val) {
-    return true;
-  }
+//   _approveLoan(val) {
+//     return true;
+//   }
 
-  requestLoan(val) {
-    if (this._approveLoan(val)) {
-      this.deposit(val);
-      console.log(`Loan Approved`);
-    }
-  }
-}
+//   requestLoan(val) {
+//     if (this._approveLoan(val)) {
+//       this.deposit(val);
+//       console.log(`Loan Approved`);
+//       return this;
+//     }
+//   }
+// }
 
-const acc1 = new Account('oli', 'TAKA', 1111);
-acc1.deposit(250);
-acc1.withdraw(140);
-acc1.requestLoan(1000);
-console.log(acc1);
+// const acc1 = new Account('oli', 'TAKA', 1111);
+// acc1.deposit(250);
+// acc1.withdraw(140);
+// acc1.requestLoan(1000);
+// console.log(acc1);
+
+// //chaining
+
+// acc1.deposit(300).deposit(500).withdraw(35).requestLoan(25000).withdraw(4000);
+
+// console.log(acc1.getMovements());
