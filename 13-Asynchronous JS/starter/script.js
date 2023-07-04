@@ -84,6 +84,7 @@ const getCountryAndNeighbour = function (country) {
 
   request.addEventListener('load', function () {
     const [data] = JSON.parse(this.responseText);
+    console.log(data);
     renderCountry(data);
 
     //Get neighbour country
@@ -97,7 +98,7 @@ const getCountryAndNeighbour = function (country) {
     request2.send();
 
     request2.addEventListener('load', function () {
-      const data2 = JSON.parse(this.responseText);
+      const [data2] = JSON.parse(this.responseText);
       console.log(data2);
       renderCountry(data2);
     });
@@ -105,4 +106,3 @@ const getCountryAndNeighbour = function (country) {
 };
 
 getCountryAndNeighbour('argentina');
-getCountryAndNeighbour('bolivia');
