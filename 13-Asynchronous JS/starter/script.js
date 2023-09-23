@@ -138,27 +138,36 @@ const renderCountry = function (data, className = '') {
 
 //getCountryData('dfgdfgfd');
 
-const whereAmI = function (lat, lng) {
-  fetch(
-    `https://geocode.xyz/${lat},${lng}?geoit=json&auth=89982670757669176163x2976`
-  )
-    .then(response => {
-      if (!response.ok)
-        throw new Error(`Problem with geocoding ${reponse.status}`);
-      return response.json();
-    })
-    .then(data => {
-      console.log(`You are in ${data.city}, ${data.country}`);
-      return fetch(`https://restcountries.com/v3.1/name/${data.country}`);
-    })
-    .then(response => {
-      if (!response.ok) throw new Error(`COuntry not found ${response.status}`);
-      return response.json();
-    })
-    .then(data => renderCountry(data[0]))
-    .catch(err => console.log(`${err.message}`));
-};
+// const whereAmI = function (lat, lng) {
+//   fetch(
+//     `https://geocode.xyz/${lat},${lng}?geoit=json&auth=89982670757669176163x2976`
+//   )
+//     .then(response => {
+//       if (!response.ok)
+//         throw new Error(`Problem with geocoding ${reponse.status}`);
+//       return response.json();
+//     })
+//     .then(data => {
+//       console.log(`You are in ${data.city}, ${data.country}`);
+//       return fetch(`https://restcountries.com/v3.1/name/${data.country}`);
+//     })
+//     .then(response => {
+//       if (!response.ok) throw new Error(`COuntry not found ${response.status}`);
+//       return response.json();
+//     })
+//     .then(data => renderCountry(data[0]))
+//     .catch(err => console.log(`${err.message}`));
+// };
 
-whereAmI(51.50354, -0.12768);
-whereAmI(51.50354, -0.12768);
-whereAmI(51.50354, -0.12768);
+// whereAmI(51.50354, -0.12768);
+// whereAmI(51.50354, -0.12768);
+// whereAmI(51.50354, -0.12768);
+
+//event loop
+
+console.log('Test Start');
+
+setTimeout(() => console.log('o sec timer'), 0);
+
+Promise.resolve('Resolved Promise 1').then(res => console.log(res));
+console.log('Test end');
