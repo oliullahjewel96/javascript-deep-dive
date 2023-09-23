@@ -108,32 +108,57 @@ const renderCountry = function (data, className = '') {
 // getCountryAndNeighbour('argentina');
 // getCountryAndNeighbour('usa');
 
-const getCountryData = function (country) {
-  fetch(`https://restcountries.com/v3.1/name/${country}`)
-    .then(
-      response => response.json(),
-      err => alert(err)
-    )
-    .then(data => {
-      console.log(data);
-      renderCountry(data[0]);
-      const neighbour = data[0].borders[0];
-      console.log(neighbour);
+// const getCountryData = function (country) {
+//   fetch(`https://restcountries.com/v3.1/name/${country}`)
+//     .then(
+//       response => response.json(),
+//       err => alert(err)
+//     )
+//     .then(data => {
+//       console.log(data);
+//       renderCountry(data[0]);
+//       const neighbour = data[0].borders[0];
+//       console.log(neighbour);
 
-      if (!neighbour) return;
+//       if (!neighbour) return;
 
-      return fetch(`https://restcountries.com/v3.1/alpha/${neighbour}`);
+//       return fetch(`https://restcountries.com/v3.1/alpha/${neighbour}`);
+//     })
+//     .then(response => response.json())
+//     .then(data => {
+//       console.log(data);
+//       renderCountry(data[0], 'neighbour');
+//     })
+//     .catch(err => alert(err));
+// };
+
+// btn.addEventListener('click', function () {
+//   getCountryData('bangladesh');
+// });
+
+//getCountryData('dfgdfgfd');
+
+const whereAmI = function (lat, lng) {
+  fetch(
+    `https://geocode.xyz/${lat},${lng}?geoit=json&auth=89982670757669176163x2976`
+  )
+    .then(response => {
+      if (!response.ok)
+        throw new Error(`Problem with geocoding ${reponse.status}`);
+      return response.json();
     })
-    .then(response => response.json())
     .then(data => {
-      console.log(data);
-      renderCountry(data[0], 'neighbour');
+      console.log(`You are in ${data.city}, ${data.country}`);
+      return fetch(`https://restcountries.com/v3.1/name/${data.country}`);
     })
-    .catch(err => alert(err));
+    .then(response => {
+      if (!response.ok) throw new Error(`COuntry not found ${response.status}`);
+      return response.json();
+    })
+    .then(data => renderCountry(data[0]))
+    .catch(err => console.log(`${err.message}`));
 };
 
-btn.addEventListener('click', function () {
-  getCountryData('bangladesh');
-});
-
-getCountryData('dfgdfgfd');
+whereAmI(51.50354, -0.12768);
+whereAmI(51.50354, -0.12768);
+whereAmI(51.50354, -0.12768);
