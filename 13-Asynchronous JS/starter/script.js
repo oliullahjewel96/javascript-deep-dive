@@ -165,9 +165,66 @@ const renderCountry = function (data, className = '') {
 
 //event loop
 
-console.log('Test Start');
+// console.log('Test Start');
 
-setTimeout(() => console.log('o sec timer'), 0);
+// setTimeout(() => console.log('o sec timer'), 0);
 
-Promise.resolve('Resolved Promise 1').then(res => console.log(res));
-console.log('Test end');
+// Promise.resolve('Resolved Promise 1').then(res => console.log(res));
+// console.log('Test end');
+
+//Simple promise
+
+// const lotteryPromise = new Promise(function (resolve, reject) {
+//   console.log('Lottery draw is happening now');
+//   setTimeout(function () {
+//     if (Math.random() >= 0.5) {
+//       resolve('You Win');
+//     } else {
+//       reject(new Error('You lost your money'));
+//     }
+//   });
+// });
+
+// lotteryPromise.then(res => console.log(res)).catch(err => console.error(err));
+
+console.log('Getting position');
+
+const getPosition = function () {
+  return new Promise(function (resolve, reject) {
+    // navigator.geolocation.getCurrentPosition(
+    //   position => resolve(position),
+    //   err => reject(err)
+    // );
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+};
+
+getPosition().then(pos => console.log(pos));
+
+const whereAmI = function () {
+  getPosition()
+    .then(pos => {
+      const { latitude: lat, longitude: lng } = pos.coords;
+      console.log(lat, lng);
+      return fetch(
+        `https://geocode.xyz/${lat},${lng}?geoit=json&auth=89982670757669176163x2976`
+      );
+    })
+    .then(response => {
+      if (!response.ok)
+        throw new Error(`Problem with geocoding ${reponse.status}`);
+      return response.json();
+    })
+    .then(data => {
+      console.log(`You are in ${data.city}, ${data.country}`);
+      return fetch(`https://restcountries.com/v3.1/name/${data.country}`);
+    })
+    .then(response => {
+      if (!response.ok) throw new Error(`Country not found ${response.status}`);
+      return response.json();
+    })
+    .then(data => renderCountry(data[0]))
+    .catch(err => console.log(`${err.message}`));
+};
+
+btn.addEventListener('click', whereAmI);
