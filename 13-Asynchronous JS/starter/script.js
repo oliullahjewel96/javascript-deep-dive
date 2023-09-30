@@ -241,14 +241,22 @@ const whereAmI = async function () {
     `https://geocode.xyz/${lat},${lng}?geoit=json&auth=89982670757669176163x2976`
   );
   const dataGeo = await resGeo.json();
-  console.log(dataGeo);
   const res = await fetch(
     `https://restcountries.com/v3.1/name/${dataGeo.country}`
   );
   const data = await res.json();
-  console.log(data);
+
   renderCountry(data[0]);
+
+  return `You are in ${dataGeo.city}, ${dataGeo.country}`;
 };
 
-whereAmI();
 console.log('FIRST');
+
+//Returning values from async function
+whereAmI().then(city => console.log(city));
+
+(async function () {
+  const res = await whereAmI();
+  console.log(res);
+})();
