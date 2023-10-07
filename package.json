@@ -1,0 +1,22 @@
+{
+  "name": "javascript-deep-dive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliullahjewel96/javascript-deep-dive.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oliullahjewel96/javascript-deep-dive/issues"
+  },
+  "homepage": "https://github.com/oliullahjewel96/javascript-deep-dive#readme",
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  }
+}
